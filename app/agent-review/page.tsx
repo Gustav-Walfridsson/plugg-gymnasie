@@ -29,10 +29,11 @@ export default function AgentReviewPage() {
       console.error('Review failed:', error)
       // Set a default report to prevent infinite loading
       setReport({
-        id: 'error-report',
         timestamp: new Date(),
         totalIssues: 0,
         issuesByType: { error: 0, warning: 0, suggestion: 0 },
+        issuesBySeverity: { high: 0, medium: 0, low: 0 },
+        issuesByCategory: { performance: 0, security: 0, maintainability: 0 },
         issues: [],
         summary: 'Review failed to complete. Please try again.',
         recommendations: ['Check console for error details', 'Try refreshing the page']
