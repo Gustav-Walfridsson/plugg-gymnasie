@@ -7,7 +7,30 @@ import { useAuth } from '../../lib/auth-simple'
 import { progressManager } from '../../lib/progress-manager'
 
 export default function ProfilePage() {
-  const { user } = useAuth()
+  const { user, loading: authLoading } = useAuth()
+  
+  // Show loading while checking auth
+  if (authLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      </div>
+    )
+  }
+
+  // Redirect to login if not authenticated
+  if (!user) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center space-y-4">
+          <h2 className="text-xl font-semibold">Du måste logga in för att se din profil</h2>
+          <Link href="/auth/login" className="btn-primary">
+            Logga in
+          </Link>
+        </div>
+      </div>
+    )
+  }
   const [profile, setProfile] = useState({
     name: user?.email || 'Användare',
     level: 1,
