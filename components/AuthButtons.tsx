@@ -1,16 +1,37 @@
 'use client'
 
 import { useAuth } from '../lib/auth-simple'
+import { useState, useEffect } from 'react'
 
 export function AuthButtons() {
-  const { user, loading, signOut } = useAuth()
+  const [isClient, setIsClient] = useState(false)
+  const [fallbackMode, setFallbackMode] = useState(false)
+  
+  // Try to use auth context, but fallback to simple buttons if it fails
+  let user = null
+  let loading = false
+  let signOut = () => {}
+  
+  try {
+    const authContext = useAuth()
+    user = authContext.user
+    loading = authContext.loading
+    signOut = authContext.signOut
+  } catch (error) {
+    console.log('Auth context not available, using fallback mode')
+    setFallbackMode(true)
+  }
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   // Show loading only for a reasonable time, then show login buttons
-  if (loading) {
+  if (!isClient || loading) {
     return <div className="text-sm text-muted-foreground">Laddar...</div>
   }
 
-  if (user) {
+  if (user && !fallbackMode) {
     return (
       <div className="flex items-center space-x-4">
         <span className="text-sm text-muted-foreground">
@@ -26,6 +47,7 @@ export function AuthButtons() {
     )
   }
 
+  // Always show login/signup buttons as fallback
   return (
     <div className="flex items-center space-x-4">
       <a href="/auth/login" className="text-sm hover:text-primary transition-colors">

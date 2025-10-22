@@ -26,51 +26,62 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     let mounted = true
 
-    // Subscribe to session changes
-    const unsubscribe = sessionManager.subscribe(async (session) => {
-      if (!mounted) return
-
-      if (session?.user) {
-        console.log('✅ User authenticated:', session.user.email)
-        setUser(session.user)
-        
-        // TEMPORARY FIX: Use auth.users.id as account_id until RLS policies are debugged
-        // TODO: Replace with RPC call to get_account_id after fixing policies
-        setAccountId(session.user.id)
-        analyticsEngine.setAccountId(session.user.id)
-        console.log('⚠️ TEMPORARY: Using auth.users.id as accountId:', session.user.id)
-      } else {
-        console.log('❌ No user in session')
-        setUser(null)
-        setAccountId(null)
-        analyticsEngine.setAccountId(null)
-      }
-      
-      setLoading(false)
-    })
-
-    // Listen for auth changes from Supabase
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        console.log('🔄 Supabase auth state change:', event, session?.user?.email || 'No user')
-        
+    try {
+      // Subscribe to session changes
+      const unsubscribe = sessionManager.subscribe(async (session) => {
         if (!mounted) return
 
-        // Update session manager
-        sessionManager.setSession(session)
-      }
-    )
+        if (session?.user) {
+          console.log('✅ User authenticated:', session.user.email)
+          setUser(session.user)
+          
+          // TEMPORARY FIX: Use auth.users.id as account_id until RLS policies are debugged
+          // TODO: Replace with RPC call to get_account_id after fixing policies
+          setAccountId(session.user.id)
+          analyticsEngine.setAccountId(session.user.id)
+          console.log('⚠️ TEMPORARY: Using auth.users.id as accountId:', session.user.id)
+        } else {
+          console.log('❌ No user in session')
+          setUser(null)
+          setAccountId(null)
+          analyticsEngine.setAccountId(null)
+        }
+        
+        setLoading(false)
+      })
 
-    return () => {
-      mounted = false
-      unsubscribe()
-      subscription.unsubscribe()
+      // Listen for auth changes from Supabase
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(
+        async (event, session) => {
+          console.log('🔄 Supabase auth state change:', event, session?.user?.email || 'No user')
+          
+          if (!mounted) return
+
+          // Update session manager
+          sessionManager.setSession(session)
+        }
+      )
+
+      return () => {
+        mounted = false
+        unsubscribe()
+        subscription.unsubscribe()
+      }
+    } catch (error) {
+      console.log('Auth initialization failed, using fallback mode:', error)
+      setLoading(false)
+      return () => {
+        mounted = false
+      }
     }
   }, [])
 
   const signUp = async (email: string, password: string) => {
     try {
       console.log('📝 Signing up:', email)
+      if (!supabase) {
+        throw new Error('Supabase not available')
+      }
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
