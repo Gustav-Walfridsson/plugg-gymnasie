@@ -1,0 +1,23 @@
+# name: Nightly Database Backup
+# on:
+#   schedule:
+#     - cron: '0 2 * * *'  # 2 AM UTC daily
+# jobs:
+#   backup:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: actions/setup-node@v4
+#       - run: npm ci
+#         working-directory: plugg-bot-1
+#       - run: npx ts-node scripts/backup-export.ts
+#         working-directory: plugg-bot-1
+#         env:
+#           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+#           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+#           BACKUP_PASSWORD: ${{ secrets.BACKUP_PASSWORD }}
+#       - uses: actions/upload-artifact@v4
+#         with:
+#           name: backup-${{ github.run_number }}
+#           path: plugg-bot-1/backup-*.json.enc
+#           retention-days: 30

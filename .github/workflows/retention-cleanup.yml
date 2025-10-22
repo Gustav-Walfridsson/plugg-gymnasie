@@ -1,0 +1,20 @@
+# name: Monthly Retention Cleanup
+# on:
+#   schedule:
+#     - cron: '0 3 1 * *'  # 1st of month, 3 AM UTC
+#   workflow_dispatch:  # Manual trigger
+# jobs:
+#   cleanup:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: actions/setup-node@v4
+#         with:
+#           node-version: '20'
+#       - run: npm ci
+#         working-directory: plugg-bot-1
+#       - run: npx ts-node scripts/retention-cleanup.ts
+#         working-directory: plugg-bot-1
+#         env:
+#           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+#           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
