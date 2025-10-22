@@ -1,0 +1,48 @@
+{
+  "name": "plugg-bot-1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:open": "next dev --open",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "auto-start": "powershell -ExecutionPolicy Bypass -File .\\auto-start.ps1",
+    "auto-start-bg": "powershell -ExecutionPolicy Bypass -File .\\auto-start.ps1 -Background",
+    "kill-node": "taskkill /f /im node.exe",
+    "check-port": "netstat -an | find \"3000\""
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.75.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "next": "15.5.5",
+    "nodemailer": "^6.9.8",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.4",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "15.5.5",
+    "jsdom": "^27.0.0",
+    "postcss": "^8",
+    "supabase": "^2.51.0",
+    "tailwindcss": "^3.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "vitest": "^2.1.8"
+  }
+}
