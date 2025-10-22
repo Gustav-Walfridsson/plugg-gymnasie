@@ -1,0 +1,802 @@
+[
+  {
+    "id": "math-item-025",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-026",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-027",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-028",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-029",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-030",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-031",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-032",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-033",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-034",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-035",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-036",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-037",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-038",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-039",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-040",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-041",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-042",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-043",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-044",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-045",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-046",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-047",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-048",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-049",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-050",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-051",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-052",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-053",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-054",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-055",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-056",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-057",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-058",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-059",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-060",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-061",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-062",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-063",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-064",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-065",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-066",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-067",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-068",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-069",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-070",
+    "skillId": "variabler-uttryck",
+    "type": "numeric",
+    "prompt": "Beräkna: 2 + 3 = ?",
+    "latex": "2 + 3 = ?",
+    "answer": {
+      "value": 5
+    },
+    "explanation": "Förklaring för Beräkna: 2 + 3 = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 1,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-071",
+    "skillId": "enkla-ekvationer",
+    "type": "numeric",
+    "prompt": "Lös ekvationen: 2x + 5 = 13",
+    "latex": "2x + 5 = 13",
+    "answer": {
+      "value": 4
+    },
+    "explanation": "Förklaring för Lös ekvationen: 2x + 5 = 13. Steg-för-steg lösning kommer här.",
+    "difficulty": 2,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-072",
+    "skillId": "parenteser",
+    "type": "numeric",
+    "prompt": "Faktorisera: x² + 5x + 6",
+    "latex": "x^2 + 5x + 6",
+    "answer": {
+      "value": 0
+    },
+    "explanation": "Förklaring för Faktorisera: x² + 5x + 6. Steg-för-steg lösning kommer här.",
+    "difficulty": 3,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-073",
+    "skillId": "kvadratiska-uttryck",
+    "type": "numeric",
+    "prompt": "Lös: x² - 4x + 3 = 0",
+    "latex": "x^2 - 4x + 3 = 0",
+    "answer": {
+      "value": 1
+    },
+    "explanation": "Förklaring för Lös: x² - 4x + 3 = 0. Steg-för-steg lösning kommer här.",
+    "difficulty": 4,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  },
+  {
+    "id": "math-item-074",
+    "skillId": "kvadratiska-ekvationer",
+    "type": "numeric",
+    "prompt": "Beräkna: log₂(8) = ?",
+    "latex": "\\log_2(8) = ?",
+    "answer": {
+      "value": 3
+    },
+    "explanation": "Förklaring för Beräkna: log₂(8) = ?. Steg-för-steg lösning kommer här.",
+    "difficulty": 5,
+    "tags": [
+      "algebra",
+      "ekvationer"
+    ]
+  }
+]

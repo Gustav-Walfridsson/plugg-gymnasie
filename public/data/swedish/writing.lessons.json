@@ -1,0 +1,37 @@
+[
+  {
+    "id": "lesson-001",
+    "skillId": "meningsbyggnad",
+    "title": "Meningsbyggnad - Lektion 1",
+    "content": "Detta är innehållet för Meningsbyggnad lektion 1. Här lär du dig grundläggande koncept och metoder.",
+    "order": 1
+  },
+  {
+    "id": "lesson-002",
+    "skillId": "styckesstruktur",
+    "title": "Styckesstruktur - Lektion 2",
+    "content": "Detta är innehållet för Styckesstruktur lektion 2. Här lär du dig grundläggande koncept och metoder.",
+    "order": 2
+  },
+  {
+    "id": "lesson-003",
+    "skillId": "argumentation",
+    "title": "Argumentation - Lektion 3",
+    "content": "Detta är innehållet för Argumentation lektion 3. Här lär du dig grundläggande koncept och metoder.",
+    "order": 3
+  },
+  {
+    "id": "lesson-004",
+    "skillId": "textanalys",
+    "title": "Textanalys - Lektion 4",
+    "content": "Detta är innehållet för Textanalys lektion 4. Här lär du dig grundläggande koncept och metoder.",
+    "order": 4
+  },
+  {
+    "id": "lesson-005",
+    "skillId": "kreativt-skrivande",
+    "title": "Kreativt skrivande - Lektion 5",
+    "content": "Detta är innehållet för Kreativt skrivande lektion 5. Här lär du dig grundläggande koncept och metoder.",
+    "order": 5
+  }
+]

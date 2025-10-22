@@ -1,0 +1,1027 @@
+[
+  {
+    "id": "english-item-000",
+    "skillId": "basic-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a sentence about your favorite food.",
+    "answer": {
+      "modelAnswer": "My favorite food is pizza because it tastes delicious."
+    },
+    "explanation": "English writing explanation for Write a sentence about your favorite food.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 1,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentence with basic structure",
+      "levelC": "Clear sentence with varied word order",
+      "levelA": "Engaging sentence with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favorite",
+        "food",
+        "delicious",
+        "taste"
+      ]
+    }
+  },
+  {
+    "id": "english-item-001",
+    "skillId": "sentence-structure",
+    "type": "freeText",
+    "prompt": "Describe your best friend in 2-3 sentences.",
+    "answer": {
+      "modelAnswer": "My best friend is kind and funny. We have known each other for years."
+    },
+    "explanation": "English writing explanation for Describe your best friend in 2-3 sentences.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 2,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentences with basic description",
+      "levelC": "Clear sentences with varied structure",
+      "levelA": "Engaging description with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "best friend",
+        "kind",
+        "funny",
+        "years"
+      ]
+    }
+  },
+  {
+    "id": "english-item-002",
+    "skillId": "paragraph-writing",
+    "type": "freeText",
+    "prompt": "Argue why exercise is important for health.",
+    "answer": {
+      "modelAnswer": "Exercise is important because it keeps our bodies strong and healthy."
+    },
+    "explanation": "English writing explanation for Argue why exercise is important for health.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 3,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple arguments with basic structure",
+      "levelC": "Clear arguments with logical organization",
+      "levelA": "Persuasive arguments with advanced rhetoric",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "exercise",
+        "important",
+        "health",
+        "strong"
+      ]
+    }
+  },
+  {
+    "id": "english-item-003",
+    "skillId": "essay-writing",
+    "type": "freeText",
+    "prompt": "Analyze the theme of friendship in a short story.",
+    "answer": {
+      "modelAnswer": "The story explores how friendship can overcome challenges and bring joy."
+    },
+    "explanation": "English writing explanation for Analyze the theme of friendship in a short story.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 4,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple analysis with basic understanding",
+      "levelC": "Clear analysis with logical structure",
+      "levelA": "Deep analysis with advanced insight",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analysis",
+        "theme",
+        "friendship",
+        "story"
+      ]
+    }
+  },
+  {
+    "id": "english-item-004",
+    "skillId": "advanced-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a creative story about a mysterious island.",
+    "answer": {
+      "modelAnswer": "The mysterious island appeared suddenly in the mist, calling to adventurous souls."
+    },
+    "explanation": "English writing explanation for Write a creative story about a mysterious island.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 5,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple story with basic structure",
+      "levelC": "Clear story with varied style",
+      "levelA": "Engaging story with advanced language",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "creative",
+        "story",
+        "mysterious",
+        "island"
+      ]
+    }
+  },
+  {
+    "id": "english-item-005",
+    "skillId": "basic-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a sentence about your favorite food.",
+    "answer": {
+      "modelAnswer": "My favorite food is pizza because it tastes delicious."
+    },
+    "explanation": "English writing explanation for Write a sentence about your favorite food.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 1,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentence with basic structure",
+      "levelC": "Clear sentence with varied word order",
+      "levelA": "Engaging sentence with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favorite",
+        "food",
+        "delicious",
+        "taste"
+      ]
+    }
+  },
+  {
+    "id": "english-item-006",
+    "skillId": "sentence-structure",
+    "type": "freeText",
+    "prompt": "Describe your best friend in 2-3 sentences.",
+    "answer": {
+      "modelAnswer": "My best friend is kind and funny. We have known each other for years."
+    },
+    "explanation": "English writing explanation for Describe your best friend in 2-3 sentences.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 2,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentences with basic description",
+      "levelC": "Clear sentences with varied structure",
+      "levelA": "Engaging description with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "best friend",
+        "kind",
+        "funny",
+        "years"
+      ]
+    }
+  },
+  {
+    "id": "english-item-007",
+    "skillId": "paragraph-writing",
+    "type": "freeText",
+    "prompt": "Argue why exercise is important for health.",
+    "answer": {
+      "modelAnswer": "Exercise is important because it keeps our bodies strong and healthy."
+    },
+    "explanation": "English writing explanation for Argue why exercise is important for health.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 3,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple arguments with basic structure",
+      "levelC": "Clear arguments with logical organization",
+      "levelA": "Persuasive arguments with advanced rhetoric",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "exercise",
+        "important",
+        "health",
+        "strong"
+      ]
+    }
+  },
+  {
+    "id": "english-item-008",
+    "skillId": "essay-writing",
+    "type": "freeText",
+    "prompt": "Analyze the theme of friendship in a short story.",
+    "answer": {
+      "modelAnswer": "The story explores how friendship can overcome challenges and bring joy."
+    },
+    "explanation": "English writing explanation for Analyze the theme of friendship in a short story.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 4,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple analysis with basic understanding",
+      "levelC": "Clear analysis with logical structure",
+      "levelA": "Deep analysis with advanced insight",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analysis",
+        "theme",
+        "friendship",
+        "story"
+      ]
+    }
+  },
+  {
+    "id": "english-item-009",
+    "skillId": "advanced-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a creative story about a mysterious island.",
+    "answer": {
+      "modelAnswer": "The mysterious island appeared suddenly in the mist, calling to adventurous souls."
+    },
+    "explanation": "English writing explanation for Write a creative story about a mysterious island.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 5,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple story with basic structure",
+      "levelC": "Clear story with varied style",
+      "levelA": "Engaging story with advanced language",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "creative",
+        "story",
+        "mysterious",
+        "island"
+      ]
+    }
+  },
+  {
+    "id": "english-item-010",
+    "skillId": "basic-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a sentence about your favorite food.",
+    "answer": {
+      "modelAnswer": "My favorite food is pizza because it tastes delicious."
+    },
+    "explanation": "English writing explanation for Write a sentence about your favorite food.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 1,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentence with basic structure",
+      "levelC": "Clear sentence with varied word order",
+      "levelA": "Engaging sentence with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favorite",
+        "food",
+        "delicious",
+        "taste"
+      ]
+    }
+  },
+  {
+    "id": "english-item-011",
+    "skillId": "sentence-structure",
+    "type": "freeText",
+    "prompt": "Describe your best friend in 2-3 sentences.",
+    "answer": {
+      "modelAnswer": "My best friend is kind and funny. We have known each other for years."
+    },
+    "explanation": "English writing explanation for Describe your best friend in 2-3 sentences.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 2,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentences with basic description",
+      "levelC": "Clear sentences with varied structure",
+      "levelA": "Engaging description with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "best friend",
+        "kind",
+        "funny",
+        "years"
+      ]
+    }
+  },
+  {
+    "id": "english-item-012",
+    "skillId": "paragraph-writing",
+    "type": "freeText",
+    "prompt": "Argue why exercise is important for health.",
+    "answer": {
+      "modelAnswer": "Exercise is important because it keeps our bodies strong and healthy."
+    },
+    "explanation": "English writing explanation for Argue why exercise is important for health.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 3,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple arguments with basic structure",
+      "levelC": "Clear arguments with logical organization",
+      "levelA": "Persuasive arguments with advanced rhetoric",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "exercise",
+        "important",
+        "health",
+        "strong"
+      ]
+    }
+  },
+  {
+    "id": "english-item-013",
+    "skillId": "essay-writing",
+    "type": "freeText",
+    "prompt": "Analyze the theme of friendship in a short story.",
+    "answer": {
+      "modelAnswer": "The story explores how friendship can overcome challenges and bring joy."
+    },
+    "explanation": "English writing explanation for Analyze the theme of friendship in a short story.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 4,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple analysis with basic understanding",
+      "levelC": "Clear analysis with logical structure",
+      "levelA": "Deep analysis with advanced insight",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analysis",
+        "theme",
+        "friendship",
+        "story"
+      ]
+    }
+  },
+  {
+    "id": "english-item-014",
+    "skillId": "advanced-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a creative story about a mysterious island.",
+    "answer": {
+      "modelAnswer": "The mysterious island appeared suddenly in the mist, calling to adventurous souls."
+    },
+    "explanation": "English writing explanation for Write a creative story about a mysterious island.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 5,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple story with basic structure",
+      "levelC": "Clear story with varied style",
+      "levelA": "Engaging story with advanced language",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "creative",
+        "story",
+        "mysterious",
+        "island"
+      ]
+    }
+  },
+  {
+    "id": "english-item-015",
+    "skillId": "basic-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a sentence about your favorite food.",
+    "answer": {
+      "modelAnswer": "My favorite food is pizza because it tastes delicious."
+    },
+    "explanation": "English writing explanation for Write a sentence about your favorite food.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 1,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentence with basic structure",
+      "levelC": "Clear sentence with varied word order",
+      "levelA": "Engaging sentence with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favorite",
+        "food",
+        "delicious",
+        "taste"
+      ]
+    }
+  },
+  {
+    "id": "english-item-016",
+    "skillId": "sentence-structure",
+    "type": "freeText",
+    "prompt": "Describe your best friend in 2-3 sentences.",
+    "answer": {
+      "modelAnswer": "My best friend is kind and funny. We have known each other for years."
+    },
+    "explanation": "English writing explanation for Describe your best friend in 2-3 sentences.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 2,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentences with basic description",
+      "levelC": "Clear sentences with varied structure",
+      "levelA": "Engaging description with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "best friend",
+        "kind",
+        "funny",
+        "years"
+      ]
+    }
+  },
+  {
+    "id": "english-item-017",
+    "skillId": "paragraph-writing",
+    "type": "freeText",
+    "prompt": "Argue why exercise is important for health.",
+    "answer": {
+      "modelAnswer": "Exercise is important because it keeps our bodies strong and healthy."
+    },
+    "explanation": "English writing explanation for Argue why exercise is important for health.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 3,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple arguments with basic structure",
+      "levelC": "Clear arguments with logical organization",
+      "levelA": "Persuasive arguments with advanced rhetoric",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "exercise",
+        "important",
+        "health",
+        "strong"
+      ]
+    }
+  },
+  {
+    "id": "english-item-018",
+    "skillId": "essay-writing",
+    "type": "freeText",
+    "prompt": "Analyze the theme of friendship in a short story.",
+    "answer": {
+      "modelAnswer": "The story explores how friendship can overcome challenges and bring joy."
+    },
+    "explanation": "English writing explanation for Analyze the theme of friendship in a short story.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 4,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple analysis with basic understanding",
+      "levelC": "Clear analysis with logical structure",
+      "levelA": "Deep analysis with advanced insight",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analysis",
+        "theme",
+        "friendship",
+        "story"
+      ]
+    }
+  },
+  {
+    "id": "english-item-019",
+    "skillId": "advanced-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a creative story about a mysterious island.",
+    "answer": {
+      "modelAnswer": "The mysterious island appeared suddenly in the mist, calling to adventurous souls."
+    },
+    "explanation": "English writing explanation for Write a creative story about a mysterious island.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 5,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple story with basic structure",
+      "levelC": "Clear story with varied style",
+      "levelA": "Engaging story with advanced language",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "creative",
+        "story",
+        "mysterious",
+        "island"
+      ]
+    }
+  },
+  {
+    "id": "english-item-020",
+    "skillId": "basic-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a sentence about your favorite food.",
+    "answer": {
+      "modelAnswer": "My favorite food is pizza because it tastes delicious."
+    },
+    "explanation": "English writing explanation for Write a sentence about your favorite food.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 1,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentence with basic structure",
+      "levelC": "Clear sentence with varied word order",
+      "levelA": "Engaging sentence with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favorite",
+        "food",
+        "delicious",
+        "taste"
+      ]
+    }
+  },
+  {
+    "id": "english-item-021",
+    "skillId": "sentence-structure",
+    "type": "freeText",
+    "prompt": "Describe your best friend in 2-3 sentences.",
+    "answer": {
+      "modelAnswer": "My best friend is kind and funny. We have known each other for years."
+    },
+    "explanation": "English writing explanation for Describe your best friend in 2-3 sentences.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 2,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple sentences with basic description",
+      "levelC": "Clear sentences with varied structure",
+      "levelA": "Engaging description with advanced language",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "best friend",
+        "kind",
+        "funny",
+        "years"
+      ]
+    }
+  },
+  {
+    "id": "english-item-022",
+    "skillId": "paragraph-writing",
+    "type": "freeText",
+    "prompt": "Argue why exercise is important for health.",
+    "answer": {
+      "modelAnswer": "Exercise is important because it keeps our bodies strong and healthy."
+    },
+    "explanation": "English writing explanation for Argue why exercise is important for health.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 3,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple arguments with basic structure",
+      "levelC": "Clear arguments with logical organization",
+      "levelA": "Persuasive arguments with advanced rhetoric",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "exercise",
+        "important",
+        "health",
+        "strong"
+      ]
+    }
+  },
+  {
+    "id": "english-item-023",
+    "skillId": "essay-writing",
+    "type": "freeText",
+    "prompt": "Analyze the theme of friendship in a short story.",
+    "answer": {
+      "modelAnswer": "The story explores how friendship can overcome challenges and bring joy."
+    },
+    "explanation": "English writing explanation for Analyze the theme of friendship in a short story.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 4,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple analysis with basic understanding",
+      "levelC": "Clear analysis with logical structure",
+      "levelA": "Deep analysis with advanced insight",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analysis",
+        "theme",
+        "friendship",
+        "story"
+      ]
+    }
+  },
+  {
+    "id": "english-item-024",
+    "skillId": "advanced-vocabulary",
+    "type": "freeText",
+    "prompt": "Write a creative story about a mysterious island.",
+    "answer": {
+      "modelAnswer": "The mysterious island appeared suddenly in the mist, calling to adventurous souls."
+    },
+    "explanation": "English writing explanation for Write a creative story about a mysterious island.. Focus on structure, grammar, and vocabulary.",
+    "difficulty": 5,
+    "tags": [
+      "writing",
+      "grammar",
+      "structure"
+    ],
+    "rubric": {
+      "levelE": "Simple story with basic structure",
+      "levelC": "Clear story with varied style",
+      "levelA": "Engaging story with advanced language",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "creative",
+        "story",
+        "mysterious",
+        "island"
+      ]
+    }
+  }
+]

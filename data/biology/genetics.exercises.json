@@ -1,0 +1,702 @@
+[
+  {
+    "id": "biology-item-000",
+    "skillId": "cellstruktur",
+    "type": "mcq",
+    "prompt": "Vilka är DNA:s byggstenar?",
+    "choices": [
+      "Nukleotider",
+      "Aminosyror",
+      "Socker",
+      "Fettsyror"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! DNA består av nukleotider.",
+        "Fel. Aminosyror bygger proteiner.",
+        "Fel. Socker är bara en del av nukleotiden.",
+        "Fel. Fettsyror bygger cellmembran."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilka är DNA:s byggstenar?. Tänk på genetiska processer och arv.",
+    "difficulty": 1,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-001",
+    "skillId": "dna-struktur",
+    "type": "mcq",
+    "prompt": "Vilken bas parar med adenin i DNA?",
+    "choices": [
+      "Tymin",
+      "Cytosin",
+      "Guanin",
+      "Uracil"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! A parar med T i DNA.",
+        "Fel. C parar med G.",
+        "Fel. C parar med G.",
+        "Fel. Uracil finns i RNA, inte DNA."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken bas parar med adenin i DNA?. Tänk på genetiska processer och arv.",
+    "difficulty": 2,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-002",
+    "skillId": "genetisk-kod",
+    "type": "mcq",
+    "prompt": "Vad kallas processen när DNA kopieras?",
+    "choices": [
+      "Replikation",
+      "Transkription",
+      "Translation",
+      "Transformation"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Replikation är DNA-kopiering.",
+        "Fel. Transkription är DNA→RNA.",
+        "Fel. Translation är RNA→protein.",
+        "Fel. Transformation är genöverföring."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vad kallas processen när DNA kopieras?. Tänk på genetiska processer och arv.",
+    "difficulty": 3,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-003",
+    "skillId": "arvslagar",
+    "type": "mcq",
+    "prompt": "Vilken är sannolikheten för att få bb från Bb × bb?",
+    "choices": [
+      "25%",
+      "50%",
+      "75%",
+      "100%"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Räkna om Punnett-rutan.",
+        "Korrekt! Bb × bb ger 50% bb.",
+        "Fel. Räkna om Punnett-rutan.",
+        "Fel. Räkna om Punnett-rutan."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken är sannolikheten för att få bb från Bb × bb?. Tänk på genetiska processer och arv.",
+    "difficulty": 4,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-004",
+    "skillId": "mutationer",
+    "type": "mcq",
+    "prompt": "Vilken mutation påverkar inte proteinet?",
+    "choices": [
+      "Missense",
+      "Nonsense",
+      "Silent",
+      "Frameshift"
+    ],
+    "answer": {
+      "correctIndex": 2,
+      "rationales": [
+        "Fel. Missense ändrar aminosyra.",
+        "Fel. Nonsense stoppar translation.",
+        "Korrekt! Silent mutation ändrar inte aminosyra.",
+        "Fel. Frameshift ändrar allt efteråt."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken mutation påverkar inte proteinet?. Tänk på genetiska processer och arv.",
+    "difficulty": 5,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-005",
+    "skillId": "cellstruktur",
+    "type": "mcq",
+    "prompt": "Vilka är DNA:s byggstenar?",
+    "choices": [
+      "Nukleotider",
+      "Aminosyror",
+      "Socker",
+      "Fettsyror"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! DNA består av nukleotider.",
+        "Fel. Aminosyror bygger proteiner.",
+        "Fel. Socker är bara en del av nukleotiden.",
+        "Fel. Fettsyror bygger cellmembran."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilka är DNA:s byggstenar?. Tänk på genetiska processer och arv.",
+    "difficulty": 1,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-006",
+    "skillId": "dna-struktur",
+    "type": "mcq",
+    "prompt": "Vilken bas parar med adenin i DNA?",
+    "choices": [
+      "Tymin",
+      "Cytosin",
+      "Guanin",
+      "Uracil"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! A parar med T i DNA.",
+        "Fel. C parar med G.",
+        "Fel. C parar med G.",
+        "Fel. Uracil finns i RNA, inte DNA."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken bas parar med adenin i DNA?. Tänk på genetiska processer och arv.",
+    "difficulty": 2,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-007",
+    "skillId": "genetisk-kod",
+    "type": "mcq",
+    "prompt": "Vad kallas processen när DNA kopieras?",
+    "choices": [
+      "Replikation",
+      "Transkription",
+      "Translation",
+      "Transformation"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Replikation är DNA-kopiering.",
+        "Fel. Transkription är DNA→RNA.",
+        "Fel. Translation är RNA→protein.",
+        "Fel. Transformation är genöverföring."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vad kallas processen när DNA kopieras?. Tänk på genetiska processer och arv.",
+    "difficulty": 3,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-008",
+    "skillId": "arvslagar",
+    "type": "mcq",
+    "prompt": "Vilken är sannolikheten för att få bb från Bb × bb?",
+    "choices": [
+      "25%",
+      "50%",
+      "75%",
+      "100%"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Räkna om Punnett-rutan.",
+        "Korrekt! Bb × bb ger 50% bb.",
+        "Fel. Räkna om Punnett-rutan.",
+        "Fel. Räkna om Punnett-rutan."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken är sannolikheten för att få bb från Bb × bb?. Tänk på genetiska processer och arv.",
+    "difficulty": 4,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-009",
+    "skillId": "mutationer",
+    "type": "mcq",
+    "prompt": "Vilken mutation påverkar inte proteinet?",
+    "choices": [
+      "Missense",
+      "Nonsense",
+      "Silent",
+      "Frameshift"
+    ],
+    "answer": {
+      "correctIndex": 2,
+      "rationales": [
+        "Fel. Missense ändrar aminosyra.",
+        "Fel. Nonsense stoppar translation.",
+        "Korrekt! Silent mutation ändrar inte aminosyra.",
+        "Fel. Frameshift ändrar allt efteråt."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken mutation påverkar inte proteinet?. Tänk på genetiska processer och arv.",
+    "difficulty": 5,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-010",
+    "skillId": "cellstruktur",
+    "type": "mcq",
+    "prompt": "Vilka är DNA:s byggstenar?",
+    "choices": [
+      "Nukleotider",
+      "Aminosyror",
+      "Socker",
+      "Fettsyror"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! DNA består av nukleotider.",
+        "Fel. Aminosyror bygger proteiner.",
+        "Fel. Socker är bara en del av nukleotiden.",
+        "Fel. Fettsyror bygger cellmembran."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilka är DNA:s byggstenar?. Tänk på genetiska processer och arv.",
+    "difficulty": 1,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-011",
+    "skillId": "dna-struktur",
+    "type": "mcq",
+    "prompt": "Vilken bas parar med adenin i DNA?",
+    "choices": [
+      "Tymin",
+      "Cytosin",
+      "Guanin",
+      "Uracil"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! A parar med T i DNA.",
+        "Fel. C parar med G.",
+        "Fel. C parar med G.",
+        "Fel. Uracil finns i RNA, inte DNA."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken bas parar med adenin i DNA?. Tänk på genetiska processer och arv.",
+    "difficulty": 2,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-012",
+    "skillId": "genetisk-kod",
+    "type": "mcq",
+    "prompt": "Vad kallas processen när DNA kopieras?",
+    "choices": [
+      "Replikation",
+      "Transkription",
+      "Translation",
+      "Transformation"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Replikation är DNA-kopiering.",
+        "Fel. Transkription är DNA→RNA.",
+        "Fel. Translation är RNA→protein.",
+        "Fel. Transformation är genöverföring."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vad kallas processen när DNA kopieras?. Tänk på genetiska processer och arv.",
+    "difficulty": 3,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-013",
+    "skillId": "arvslagar",
+    "type": "mcq",
+    "prompt": "Vilken är sannolikheten för att få bb från Bb × bb?",
+    "choices": [
+      "25%",
+      "50%",
+      "75%",
+      "100%"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Räkna om Punnett-rutan.",
+        "Korrekt! Bb × bb ger 50% bb.",
+        "Fel. Räkna om Punnett-rutan.",
+        "Fel. Räkna om Punnett-rutan."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken är sannolikheten för att få bb från Bb × bb?. Tänk på genetiska processer och arv.",
+    "difficulty": 4,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-014",
+    "skillId": "mutationer",
+    "type": "mcq",
+    "prompt": "Vilken mutation påverkar inte proteinet?",
+    "choices": [
+      "Missense",
+      "Nonsense",
+      "Silent",
+      "Frameshift"
+    ],
+    "answer": {
+      "correctIndex": 2,
+      "rationales": [
+        "Fel. Missense ändrar aminosyra.",
+        "Fel. Nonsense stoppar translation.",
+        "Korrekt! Silent mutation ändrar inte aminosyra.",
+        "Fel. Frameshift ändrar allt efteråt."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken mutation påverkar inte proteinet?. Tänk på genetiska processer och arv.",
+    "difficulty": 5,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-015",
+    "skillId": "cellstruktur",
+    "type": "mcq",
+    "prompt": "Vilka är DNA:s byggstenar?",
+    "choices": [
+      "Nukleotider",
+      "Aminosyror",
+      "Socker",
+      "Fettsyror"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! DNA består av nukleotider.",
+        "Fel. Aminosyror bygger proteiner.",
+        "Fel. Socker är bara en del av nukleotiden.",
+        "Fel. Fettsyror bygger cellmembran."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilka är DNA:s byggstenar?. Tänk på genetiska processer och arv.",
+    "difficulty": 1,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-016",
+    "skillId": "dna-struktur",
+    "type": "mcq",
+    "prompt": "Vilken bas parar med adenin i DNA?",
+    "choices": [
+      "Tymin",
+      "Cytosin",
+      "Guanin",
+      "Uracil"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! A parar med T i DNA.",
+        "Fel. C parar med G.",
+        "Fel. C parar med G.",
+        "Fel. Uracil finns i RNA, inte DNA."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken bas parar med adenin i DNA?. Tänk på genetiska processer och arv.",
+    "difficulty": 2,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-017",
+    "skillId": "genetisk-kod",
+    "type": "mcq",
+    "prompt": "Vad kallas processen när DNA kopieras?",
+    "choices": [
+      "Replikation",
+      "Transkription",
+      "Translation",
+      "Transformation"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Replikation är DNA-kopiering.",
+        "Fel. Transkription är DNA→RNA.",
+        "Fel. Translation är RNA→protein.",
+        "Fel. Transformation är genöverföring."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vad kallas processen när DNA kopieras?. Tänk på genetiska processer och arv.",
+    "difficulty": 3,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-018",
+    "skillId": "arvslagar",
+    "type": "mcq",
+    "prompt": "Vilken är sannolikheten för att få bb från Bb × bb?",
+    "choices": [
+      "25%",
+      "50%",
+      "75%",
+      "100%"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Räkna om Punnett-rutan.",
+        "Korrekt! Bb × bb ger 50% bb.",
+        "Fel. Räkna om Punnett-rutan.",
+        "Fel. Räkna om Punnett-rutan."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken är sannolikheten för att få bb från Bb × bb?. Tänk på genetiska processer och arv.",
+    "difficulty": 4,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-019",
+    "skillId": "mutationer",
+    "type": "mcq",
+    "prompt": "Vilken mutation påverkar inte proteinet?",
+    "choices": [
+      "Missense",
+      "Nonsense",
+      "Silent",
+      "Frameshift"
+    ],
+    "answer": {
+      "correctIndex": 2,
+      "rationales": [
+        "Fel. Missense ändrar aminosyra.",
+        "Fel. Nonsense stoppar translation.",
+        "Korrekt! Silent mutation ändrar inte aminosyra.",
+        "Fel. Frameshift ändrar allt efteråt."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken mutation påverkar inte proteinet?. Tänk på genetiska processer och arv.",
+    "difficulty": 5,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-020",
+    "skillId": "cellstruktur",
+    "type": "mcq",
+    "prompt": "Vilka är DNA:s byggstenar?",
+    "choices": [
+      "Nukleotider",
+      "Aminosyror",
+      "Socker",
+      "Fettsyror"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! DNA består av nukleotider.",
+        "Fel. Aminosyror bygger proteiner.",
+        "Fel. Socker är bara en del av nukleotiden.",
+        "Fel. Fettsyror bygger cellmembran."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilka är DNA:s byggstenar?. Tänk på genetiska processer och arv.",
+    "difficulty": 1,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-021",
+    "skillId": "dna-struktur",
+    "type": "mcq",
+    "prompt": "Vilken bas parar med adenin i DNA?",
+    "choices": [
+      "Tymin",
+      "Cytosin",
+      "Guanin",
+      "Uracil"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! A parar med T i DNA.",
+        "Fel. C parar med G.",
+        "Fel. C parar med G.",
+        "Fel. Uracil finns i RNA, inte DNA."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken bas parar med adenin i DNA?. Tänk på genetiska processer och arv.",
+    "difficulty": 2,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-022",
+    "skillId": "genetisk-kod",
+    "type": "mcq",
+    "prompt": "Vad kallas processen när DNA kopieras?",
+    "choices": [
+      "Replikation",
+      "Transkription",
+      "Translation",
+      "Transformation"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Replikation är DNA-kopiering.",
+        "Fel. Transkription är DNA→RNA.",
+        "Fel. Translation är RNA→protein.",
+        "Fel. Transformation är genöverföring."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vad kallas processen när DNA kopieras?. Tänk på genetiska processer och arv.",
+    "difficulty": 3,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-023",
+    "skillId": "arvslagar",
+    "type": "mcq",
+    "prompt": "Vilken är sannolikheten för att få bb från Bb × bb?",
+    "choices": [
+      "25%",
+      "50%",
+      "75%",
+      "100%"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Räkna om Punnett-rutan.",
+        "Korrekt! Bb × bb ger 50% bb.",
+        "Fel. Räkna om Punnett-rutan.",
+        "Fel. Räkna om Punnett-rutan."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken är sannolikheten för att få bb från Bb × bb?. Tänk på genetiska processer och arv.",
+    "difficulty": 4,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  },
+  {
+    "id": "biology-item-024",
+    "skillId": "mutationer",
+    "type": "mcq",
+    "prompt": "Vilken mutation påverkar inte proteinet?",
+    "choices": [
+      "Missense",
+      "Nonsense",
+      "Silent",
+      "Frameshift"
+    ],
+    "answer": {
+      "correctIndex": 2,
+      "rationales": [
+        "Fel. Missense ändrar aminosyra.",
+        "Fel. Nonsense stoppar translation.",
+        "Korrekt! Silent mutation ändrar inte aminosyra.",
+        "Fel. Frameshift ändrar allt efteråt."
+      ]
+    },
+    "explanation": "Biologisk förklaring för Vilken mutation påverkar inte proteinet?. Tänk på genetiska processer och arv.",
+    "difficulty": 5,
+    "tags": [
+      "genetik",
+      "DNA",
+      "arv"
+    ]
+  }
+]

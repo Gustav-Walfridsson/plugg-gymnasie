@@ -1,0 +1,400 @@
+{
+  "matematik": {
+    "items": [
+      {
+        "id": "math-1",
+        "skillId": "variabler-uttryck",
+        "question": "Vad är värdet av uttrycket 3x + 5 när x = 4?",
+        "type": "numeric",
+        "correctAnswer": 17,
+        "explanation": "3(4) + 5 = 12 + 5 = 17",
+        "difficulty": "enkel"
+      },
+      {
+        "id": "math-2",
+        "skillId": "variabler-uttryck",
+        "question": "Förenkla uttrycket: 2x + 3x - x",
+        "type": "free-text",
+        "correctAnswer": "4x",
+        "explanation": "2x + 3x - x = (2 + 3 - 1)x = 4x",
+        "difficulty": "enkel"
+      },
+      {
+        "id": "math-3",
+        "skillId": "enkla-ekvationer",
+        "question": "Lös ekvationen: 2x + 7 = 15",
+        "type": "numeric",
+        "correctAnswer": 4,
+        "explanation": "2x + 7 = 15 → 2x = 8 → x = 4",
+        "difficulty": "enkel"
+      },
+      {
+        "id": "math-4",
+        "skillId": "enkla-ekvationer",
+        "question": "Lös ekvationen: 3(x - 2) = 12",
+        "type": "numeric",
+        "correctAnswer": 6,
+        "explanation": "3(x - 2) = 12 → x - 2 = 4 → x = 6",
+        "difficulty": "medel"
+      },
+      {
+        "id": "math-5",
+        "skillId": "parenteser",
+        "question": "Utveckla: (x + 3)(x + 2)",
+        "type": "free-text",
+        "correctAnswer": "x² + 5x + 6",
+        "explanation": "(x + 3)(x + 2) = x² + 2x + 3x + 6 = x² + 5x + 6",
+        "difficulty": "medel"
+      },
+      {
+        "id": "math-6",
+        "skillId": "parenteser",
+        "question": "Faktorisera: x² - 9",
+        "type": "free-text",
+        "correctAnswer": "(x + 3)(x - 3)",
+        "explanation": "x² - 9 = x² - 3² = (x + 3)(x - 3)",
+        "difficulty": "medel"
+      },
+      {
+        "id": "math-7",
+        "skillId": "kvadratiska-uttryck",
+        "question": "Faktorisera: x² + 6x + 9",
+        "type": "free-text",
+        "correctAnswer": "(x + 3)²",
+        "explanation": "x² + 6x + 9 = (x + 3)²",
+        "difficulty": "svår"
+      },
+      {
+        "id": "math-8",
+        "skillId": "kvadratiska-ekvationer",
+        "question": "Lös ekvationen: x² - 5x + 6 = 0",
+        "type": "mcq",
+        "options": ["x = 2 och x = 3", "x = 1 och x = 6", "x = -2 och x = -3", "Ingen lösning"],
+        "correctAnswer": "x = 2 och x = 3",
+        "explanation": "x² - 5x + 6 = (x - 2)(x - 3) = 0, så x = 2 eller x = 3",
+        "difficulty": "svår"
+      },
+      {
+        "id": "math-9",
+        "skillId": "kvadratiska-ekvationer",
+        "question": "Använd kvadratkomplettering för att lösa: x² + 4x - 5 = 0",
+        "type": "mcq",
+        "options": ["x = 1 och x = -5", "x = 2 och x = -2", "x = 5 och x = -1", "x = 3 och x = -1"],
+        "correctAnswer": "x = 1 och x = -5",
+        "explanation": "x² + 4x - 5 = (x + 2)² - 9 = 0 → (x + 2)² = 9 → x + 2 = ±3 → x = 1 eller x = -5",
+        "difficulty": "svår"
+      },
+      {
+        "id": "math-10",
+        "skillId": "variabler-uttryck",
+        "question": "Beräkna värdet av uttrycket 2x² - 3x + 1 när x = 3",
+        "type": "numeric",
+        "correctAnswer": 10,
+        "explanation": "2(3)² - 3(3) + 1 = 2(9) - 9 + 1 = 18 - 9 + 1 = 10",
+        "difficulty": "medel"
+      }
+    ]
+  },
+  "svenska": {
+    "items": [
+      {
+        "id": "svenska-1",
+        "skillId": "meningsbyggnad",
+        "question": "Vilken mening är korrekt skriven?",
+        "type": "mcq",
+        "options": [
+          "Jag går till skolan varje dag.",
+          "Jag går till skolan varje dag",
+          "jag går till skolan varje dag.",
+          "Jag går till skolan varje dag"
+        ],
+        "correctAnswer": "Jag går till skolan varje dag.",
+        "explanation": "En mening ska börja med stor bokstav och sluta med punkt.",
+        "difficulty": "enkel"
+      },
+      {
+        "id": "svenska-2",
+        "skillId": "meningsbyggnad",
+        "question": "Välj det korrekta svaret för att fylla i luckan: 'Det _____ en vacker dag idag.'",
+        "type": "mcq",
+        "options": ["är", "var", "blir", "skulle vara"],
+        "correctAnswer": "är",
+        "explanation": "'Det är' är korrekt presensform för att beskriva nuvarande tillstånd.",
+        "difficulty": "enkel"
+      },
+      {
+        "id": "svenska-3",
+        "skillId": "styckesstruktur",
+        "question": "Vilken är den bästa öppningsmeningen för ett stycke om klimatförändringar?",
+        "type": "mcq",
+        "options": [
+          "Klimatförändringar är ett viktigt ämne.",
+          "Jag tycker att klimatförändringar är intressant.",
+          "Klimatförändringar påverkar vår planet på många sätt.",
+          "Det finns många olika åsikter om klimatförändringar."
+        ],
+        "correctAnswer": "Klimatförändringar påverkar vår planet på många sätt.",
+        "explanation": "En bra öppningsmening introducerar ämnet konkret och ger en tydlig riktning för stycket.",
+        "difficulty": "medel"
+      },
+      {
+        "id": "svenska-4",
+        "skillId": "styckesstruktur",
+        "question": "Vilken mening passar bäst som avslutning för ett stycke om träning?",
+        "type": "mcq",
+        "options": [
+          "Träning är bra för hälsan.",
+          "Därför är regelbunden träning viktig för att upprätthålla en god hälsa.",
+          "Många människor tränar regelbundet.",
+          "Träning kan vara roligt."
+        ],
+        "correctAnswer": "Därför är regelbunden träning viktig för att upprätthålla en god hälsa.",
+        "explanation": "En bra avslutning sammanfattar huvudpunkten och ger en tydlig slutsats.",
+        "difficulty": "medel"
+      },
+      {
+        "id": "svenska-5",
+        "skillId": "argumentation",
+        "question": "Vilket argument stöder bäst påståendet 'Skolor borde ha längre raster'?",
+        "type": "mcq",
+        "options": [
+          "Längre raster skulle vara trevligt.",
+          "Elever behöver mer tid för att återhämta sig och socialisera.",
+          "Många lärare tycker att raster är för korta.",
+          "Det finns många olika åsikter om raster."
+        ],
+        "correctAnswer": "Elever behöver mer tid för att återhämta sig och socialisera.",
+        "explanation": "Ett starkt argument ger konkreta fördelar och förklarar varför påståendet är sant.",
+        "difficulty": "medel"
+      },
+      {
+        "id": "svenska-6",
+        "skillId": "argumentation",
+        "question": "Vilken typ av bevis är starkast för att stödja argumentet 'Läsning förbättrar språkförståelsen'?",
+        "type": "mcq",
+        "options": [
+          "Personlig åsikt",
+          "Statistik från forskning",
+          "Enstaka exempel",
+          "Allmänna påståenden"
+        ],
+        "correctAnswer": "Statistik från forskning",
+        "explanation": "Forskning och statistik ger objektiva bevis som stärker argumentet.",
+        "difficulty": "svår"
+      },
+      {
+        "id": "svenska-7",
+        "skillId": "textanalys",
+        "question": "Vad är huvudsyftet med följande text: 'Genom att använda återvinningsbara material kan vi minska vår miljöpåverkan och skapa en mer hållbar framtid.'",
+        "type": "mcq",
+        "options": [
+          "Att informera om återvinning",
+          "Att övertyga om återvinningsbara material",
+          "Att beskriva miljöproblem",
+          "Att förklara hållbarhet"
+        ],
+        "correctAnswer": "Att övertyga om återvinningsbara material",
+        "explanation": "Texten presenterar fördelar och använder övertygande språk för att påverka läsaren.",
+        "difficulty": "svår"
+      },
+      {
+        "id": "svenska-8",
+        "skillId": "textanalys",
+        "question": "Vilken retorisk teknik används i: 'Varje dag som går utan åtgärder är en dag närmare katastrofen'?",
+        "type": "mcq",
+        "options": [
+          "Jämförelse",
+          "Överdrift",
+          "Repetition",
+          "Retorisk fråga"
+        ],
+        "correctAnswer": "Överdrift",
+        "explanation": "Uttrycket använder överdrift för att skapa en känslomässig respons och betona allvaret.",
+        "difficulty": "svår"
+      },
+      {
+        "id": "svenska-9",
+        "skillId": "kreativt-skrivande",
+        "question": "Vilken öppning skapar mest spänning för en berättelse?",
+        "type": "mcq",
+        "options": [
+          "Det var en gång en prinsessa.",
+          "Regnet slog mot fönstret medan hon väntade.",
+          "Det var en vacker dag.",
+          "Hon var en vanlig tjej."
+        ],
+        "correctAnswer": "Regnet slog mot fönstret medan hon väntade.",
+        "explanation": "Denna öppning skapar atmosfär och mystik genom att använda sensoriska detaljer och föraning.",
+        "difficulty": "svår"
+      },
+      {
+        "id": "svenska-10",
+        "skillId": "kreativt-skrivande",
+        "question": "Vilken beskrivning är mest levande och engagerande?",
+        "type": "mcq",
+        "options": [
+          "Huset var stort och vitt.",
+          "Det vita huset tornade upp sig över landskapet.",
+          "Huset var mycket stort och hade vitt färg.",
+          "Det var ett stort vitt hus."
+        ],
+        "correctAnswer": "Det vita huset tornade upp sig över landskapet.",
+        "explanation": "Denna beskrivning använder aktivt språk och skapar en visuell bild som engagerar läsaren.",
+        "difficulty": "svår"
+      }
+    ]
+  },
+  "engelska": {
+    "items": [
+      {
+        "id": "english-1",
+        "skillId": "basic-vocabulary",
+        "question": "What is the English word for 'bok'?",
+        "type": "mcq",
+        "options": ["Book", "Look", "Cook", "Took"],
+        "correctAnswer": "Book",
+        "explanation": "The English word for 'bok' is 'book'.",
+        "difficulty": "enkel"
+      },
+      {
+        "id": "english-2",
+        "skillId": "basic-vocabulary",
+        "question": "Choose the correct word: 'I have a _____ car.'",
+        "type": "mcq",
+        "options": ["red", "redly", "redness", "redder"],
+        "correctAnswer": "red",
+        "explanation": "Adjectives come before nouns in English, so 'red' is correct.",
+        "difficulty": "enkel"
+      },
+      {
+        "id": "english-3",
+        "skillId": "basic-vocabulary",
+        "question": "What is the opposite of 'hot'?",
+        "type": "free-text",
+        "correctAnswer": "cold",
+        "explanation": "The opposite of 'hot' is 'cold'.",
+        "difficulty": "enkel"
+      },
+      {
+        "id": "english-4",
+        "skillId": "sentence-structure",
+        "question": "Which sentence is grammatically correct?",
+        "type": "mcq",
+        "options": [
+          "She go to school every day.",
+          "She goes to school every day.",
+          "She going to school every day.",
+          "She is go to school every day."
+        ],
+        "correctAnswer": "She goes to school every day.",
+        "explanation": "Third person singular requires 'goes' with 'she'.",
+        "difficulty": "medel"
+      },
+      {
+        "id": "english-5",
+        "skillId": "sentence-structure",
+        "question": "Complete the sentence: 'If I _____ more time, I would travel more.'",
+        "type": "mcq",
+        "options": ["have", "had", "will have", "would have"],
+        "correctAnswer": "had",
+        "explanation": "This is a second conditional, which uses 'if + past simple, would + infinitive'.",
+        "difficulty": "medel"
+      },
+      {
+        "id": "english-6",
+        "skillId": "paragraph-writing",
+        "question": "Which sentence would be the best topic sentence for a paragraph about healthy eating?",
+        "type": "mcq",
+        "options": [
+          "I like to eat healthy food.",
+          "Healthy eating is important for maintaining good health.",
+          "There are many different types of food.",
+          "Food can be expensive."
+        ],
+        "correctAnswer": "Healthy eating is important for maintaining good health.",
+        "explanation": "A good topic sentence introduces the main idea and gives direction to the paragraph.",
+        "difficulty": "medel"
+      },
+      {
+        "id": "english-7",
+        "skillId": "paragraph-writing",
+        "question": "Which transition word best connects these ideas: 'Exercise is good for you. _____, it helps reduce stress.'",
+        "type": "mcq",
+        "options": ["However", "Therefore", "Additionally", "Instead"],
+        "correctAnswer": "Additionally",
+        "explanation": "'Additionally' adds another supporting point, which fits the context.",
+        "difficulty": "medel"
+      },
+      {
+        "id": "english-8",
+        "skillId": "essay-writing",
+        "question": "What is the purpose of a thesis statement in an essay?",
+        "type": "mcq",
+        "options": [
+          "To introduce the topic",
+          "To state the main argument",
+          "To provide examples",
+          "To conclude the essay"
+        ],
+        "correctAnswer": "To state the main argument",
+        "explanation": "A thesis statement clearly states the main argument or position that the essay will defend.",
+        "difficulty": "svår"
+      },
+      {
+        "id": "english-9",
+        "skillId": "essay-writing",
+        "question": "Which is the best way to start a persuasive essay about environmental protection?",
+        "type": "mcq",
+        "options": [
+          "Environmental protection is a topic that many people discuss.",
+          "Our planet is facing unprecedented environmental challenges.",
+          "I think environmental protection is important.",
+          "There are many environmental problems today."
+        ],
+        "correctAnswer": "Our planet is facing unprecedented environmental challenges.",
+        "explanation": "This opening creates urgency and establishes the importance of the topic immediately.",
+        "difficulty": "svår"
+      },
+      {
+        "id": "english-10",
+        "skillId": "advanced-vocabulary",
+        "question": "Choose the most sophisticated word: 'The politician's speech was very _____ and convinced many people.'",
+        "type": "mcq",
+        "options": ["good", "nice", "persuasive", "okay"],
+        "correctAnswer": "persuasive",
+        "explanation": "'Persuasive' is more sophisticated and precise than the other options.",
+        "difficulty": "svår"
+      },
+      {
+        "id": "english-11",
+        "skillId": "advanced-vocabulary",
+        "question": "What does 'ubiquitous' mean?",
+        "type": "mcq",
+        "options": [
+          "Very large",
+          "Present everywhere",
+          "Very expensive",
+          "Very old"
+        ],
+        "correctAnswer": "Present everywhere",
+        "explanation": "'Ubiquitous' means present, appearing, or found everywhere.",
+        "difficulty": "svår"
+      },
+      {
+        "id": "english-12",
+        "skillId": "advanced-vocabulary",
+        "question": "Which word best describes someone who is 'meticulous'?",
+        "type": "mcq",
+        "options": [
+          "Careless",
+          "Very careful",
+          "Lazy",
+          "Angry"
+        ],
+        "correctAnswer": "Very careful",
+        "explanation": "'Meticulous' means showing great attention to detail; very careful and precise.",
+        "difficulty": "svår"
+      }
+    ]
+  }
+}

@@ -1,0 +1,677 @@
+[
+  {
+    "id": "chemistry-item-000",
+    "skillId": "atomstruktur",
+    "type": "mcq",
+    "prompt": "Vilken typ av bindning finns mellan natrium och klor i NaCl?",
+    "choices": [
+      "Jonbindning",
+      "Kovalent bindning",
+      "Metallbindning",
+      "Vätebindning"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! NaCl har jonbindning.",
+        "Fel. Kovalent bindning delar elektroner.",
+        "Fel. Metallbindning är mellan metaller.",
+        "Fel. Vätebindning är svag bindning."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken typ av bindning finns mellan natrium och klor i NaCl?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 1,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-001",
+    "skillId": "jonbindning",
+    "type": "mcq",
+    "prompt": "Hur många valenselektroner har kol?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Kol har 4 valenselektroner.",
+        "Korrekt! Kol har 4 valenselektroner.",
+        "Fel. Det är syre som har 6.",
+        "Fel. Det är neon som har 8."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Hur många valenselektroner har kol?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 2,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-002",
+    "skillId": "kovalent-bindning",
+    "type": "mcq",
+    "prompt": "Vilken molekylgeometri har CH₄?",
+    "choices": [
+      "Tetraedrisk",
+      "Plan trigonal",
+      "Linjär",
+      "Böjd"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! CH₄ har tetraedrisk geometri.",
+        "Fel. Plan trigonal har 3 bindningar.",
+        "Fel. Linjär har 2 bindningar.",
+        "Fel. Böjd har 2 bindningar + 1 lone pair."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken molekylgeometri har CH₄?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 3,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-003",
+    "skillId": "molekylgeometri",
+    "type": "mcq",
+    "prompt": "Vilken intermolekylär kraft är starkast?",
+    "choices": [
+      "Vätebindning",
+      "Dipol-dipol",
+      "London-krafter",
+      "Jon-dipol"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Vätebindning är starkast.",
+        "Fel. Dipol-dipol är svagare.",
+        "Fel. London-krafter är svagast.",
+        "Fel. Jon-dipol är mellan joner och molekyler."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken intermolekylär kraft är starkast?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 4,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-004",
+    "skillId": "intermolekylara-krafter",
+    "type": "mcq",
+    "prompt": "Beräkna elektronegativitetsskillnaden mellan H och Cl.",
+    "choices": [
+      "0.9",
+      "1.1",
+      "1.3",
+      "1.5"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! H=2.1, Cl=3.0, skillnad=0.9.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Beräkna elektronegativitetsskillnaden mellan H och Cl.. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 5,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-005",
+    "skillId": "atomstruktur",
+    "type": "mcq",
+    "prompt": "Vilken typ av bindning finns mellan natrium och klor i NaCl?",
+    "choices": [
+      "Jonbindning",
+      "Kovalent bindning",
+      "Metallbindning",
+      "Vätebindning"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! NaCl har jonbindning.",
+        "Fel. Kovalent bindning delar elektroner.",
+        "Fel. Metallbindning är mellan metaller.",
+        "Fel. Vätebindning är svag bindning."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken typ av bindning finns mellan natrium och klor i NaCl?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 1,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-006",
+    "skillId": "jonbindning",
+    "type": "mcq",
+    "prompt": "Hur många valenselektroner har kol?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Kol har 4 valenselektroner.",
+        "Korrekt! Kol har 4 valenselektroner.",
+        "Fel. Det är syre som har 6.",
+        "Fel. Det är neon som har 8."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Hur många valenselektroner har kol?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 2,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-007",
+    "skillId": "kovalent-bindning",
+    "type": "mcq",
+    "prompt": "Vilken molekylgeometri har CH₄?",
+    "choices": [
+      "Tetraedrisk",
+      "Plan trigonal",
+      "Linjär",
+      "Böjd"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! CH₄ har tetraedrisk geometri.",
+        "Fel. Plan trigonal har 3 bindningar.",
+        "Fel. Linjär har 2 bindningar.",
+        "Fel. Böjd har 2 bindningar + 1 lone pair."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken molekylgeometri har CH₄?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 3,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-008",
+    "skillId": "molekylgeometri",
+    "type": "mcq",
+    "prompt": "Vilken intermolekylär kraft är starkast?",
+    "choices": [
+      "Vätebindning",
+      "Dipol-dipol",
+      "London-krafter",
+      "Jon-dipol"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Vätebindning är starkast.",
+        "Fel. Dipol-dipol är svagare.",
+        "Fel. London-krafter är svagast.",
+        "Fel. Jon-dipol är mellan joner och molekyler."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken intermolekylär kraft är starkast?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 4,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-009",
+    "skillId": "intermolekylara-krafter",
+    "type": "mcq",
+    "prompt": "Beräkna elektronegativitetsskillnaden mellan H och Cl.",
+    "choices": [
+      "0.9",
+      "1.1",
+      "1.3",
+      "1.5"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! H=2.1, Cl=3.0, skillnad=0.9.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Beräkna elektronegativitetsskillnaden mellan H och Cl.. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 5,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-010",
+    "skillId": "atomstruktur",
+    "type": "mcq",
+    "prompt": "Vilken typ av bindning finns mellan natrium och klor i NaCl?",
+    "choices": [
+      "Jonbindning",
+      "Kovalent bindning",
+      "Metallbindning",
+      "Vätebindning"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! NaCl har jonbindning.",
+        "Fel. Kovalent bindning delar elektroner.",
+        "Fel. Metallbindning är mellan metaller.",
+        "Fel. Vätebindning är svag bindning."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken typ av bindning finns mellan natrium och klor i NaCl?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 1,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-011",
+    "skillId": "jonbindning",
+    "type": "mcq",
+    "prompt": "Hur många valenselektroner har kol?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Kol har 4 valenselektroner.",
+        "Korrekt! Kol har 4 valenselektroner.",
+        "Fel. Det är syre som har 6.",
+        "Fel. Det är neon som har 8."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Hur många valenselektroner har kol?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 2,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-012",
+    "skillId": "kovalent-bindning",
+    "type": "mcq",
+    "prompt": "Vilken molekylgeometri har CH₄?",
+    "choices": [
+      "Tetraedrisk",
+      "Plan trigonal",
+      "Linjär",
+      "Böjd"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! CH₄ har tetraedrisk geometri.",
+        "Fel. Plan trigonal har 3 bindningar.",
+        "Fel. Linjär har 2 bindningar.",
+        "Fel. Böjd har 2 bindningar + 1 lone pair."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken molekylgeometri har CH₄?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 3,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-013",
+    "skillId": "molekylgeometri",
+    "type": "mcq",
+    "prompt": "Vilken intermolekylär kraft är starkast?",
+    "choices": [
+      "Vätebindning",
+      "Dipol-dipol",
+      "London-krafter",
+      "Jon-dipol"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Vätebindning är starkast.",
+        "Fel. Dipol-dipol är svagare.",
+        "Fel. London-krafter är svagast.",
+        "Fel. Jon-dipol är mellan joner och molekyler."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken intermolekylär kraft är starkast?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 4,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-014",
+    "skillId": "intermolekylara-krafter",
+    "type": "mcq",
+    "prompt": "Beräkna elektronegativitetsskillnaden mellan H och Cl.",
+    "choices": [
+      "0.9",
+      "1.1",
+      "1.3",
+      "1.5"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! H=2.1, Cl=3.0, skillnad=0.9.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Beräkna elektronegativitetsskillnaden mellan H och Cl.. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 5,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-015",
+    "skillId": "atomstruktur",
+    "type": "mcq",
+    "prompt": "Vilken typ av bindning finns mellan natrium och klor i NaCl?",
+    "choices": [
+      "Jonbindning",
+      "Kovalent bindning",
+      "Metallbindning",
+      "Vätebindning"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! NaCl har jonbindning.",
+        "Fel. Kovalent bindning delar elektroner.",
+        "Fel. Metallbindning är mellan metaller.",
+        "Fel. Vätebindning är svag bindning."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken typ av bindning finns mellan natrium och klor i NaCl?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 1,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-016",
+    "skillId": "jonbindning",
+    "type": "mcq",
+    "prompt": "Hur många valenselektroner har kol?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Kol har 4 valenselektroner.",
+        "Korrekt! Kol har 4 valenselektroner.",
+        "Fel. Det är syre som har 6.",
+        "Fel. Det är neon som har 8."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Hur många valenselektroner har kol?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 2,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-017",
+    "skillId": "kovalent-bindning",
+    "type": "mcq",
+    "prompt": "Vilken molekylgeometri har CH₄?",
+    "choices": [
+      "Tetraedrisk",
+      "Plan trigonal",
+      "Linjär",
+      "Böjd"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! CH₄ har tetraedrisk geometri.",
+        "Fel. Plan trigonal har 3 bindningar.",
+        "Fel. Linjär har 2 bindningar.",
+        "Fel. Böjd har 2 bindningar + 1 lone pair."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken molekylgeometri har CH₄?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 3,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-018",
+    "skillId": "molekylgeometri",
+    "type": "mcq",
+    "prompt": "Vilken intermolekylär kraft är starkast?",
+    "choices": [
+      "Vätebindning",
+      "Dipol-dipol",
+      "London-krafter",
+      "Jon-dipol"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Vätebindning är starkast.",
+        "Fel. Dipol-dipol är svagare.",
+        "Fel. London-krafter är svagast.",
+        "Fel. Jon-dipol är mellan joner och molekyler."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken intermolekylär kraft är starkast?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 4,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-019",
+    "skillId": "intermolekylara-krafter",
+    "type": "mcq",
+    "prompt": "Beräkna elektronegativitetsskillnaden mellan H och Cl.",
+    "choices": [
+      "0.9",
+      "1.1",
+      "1.3",
+      "1.5"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! H=2.1, Cl=3.0, skillnad=0.9.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Beräkna elektronegativitetsskillnaden mellan H och Cl.. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 5,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-020",
+    "skillId": "atomstruktur",
+    "type": "mcq",
+    "prompt": "Vilken typ av bindning finns mellan natrium och klor i NaCl?",
+    "choices": [
+      "Jonbindning",
+      "Kovalent bindning",
+      "Metallbindning",
+      "Vätebindning"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! NaCl har jonbindning.",
+        "Fel. Kovalent bindning delar elektroner.",
+        "Fel. Metallbindning är mellan metaller.",
+        "Fel. Vätebindning är svag bindning."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken typ av bindning finns mellan natrium och klor i NaCl?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 1,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-021",
+    "skillId": "jonbindning",
+    "type": "mcq",
+    "prompt": "Hur många valenselektroner har kol?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": {
+      "correctIndex": 1,
+      "rationales": [
+        "Fel. Kol har 4 valenselektroner.",
+        "Korrekt! Kol har 4 valenselektroner.",
+        "Fel. Det är syre som har 6.",
+        "Fel. Det är neon som har 8."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Hur många valenselektroner har kol?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 2,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-022",
+    "skillId": "kovalent-bindning",
+    "type": "mcq",
+    "prompt": "Vilken molekylgeometri har CH₄?",
+    "choices": [
+      "Tetraedrisk",
+      "Plan trigonal",
+      "Linjär",
+      "Böjd"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! CH₄ har tetraedrisk geometri.",
+        "Fel. Plan trigonal har 3 bindningar.",
+        "Fel. Linjär har 2 bindningar.",
+        "Fel. Böjd har 2 bindningar + 1 lone pair."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken molekylgeometri har CH₄?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 3,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-023",
+    "skillId": "molekylgeometri",
+    "type": "mcq",
+    "prompt": "Vilken intermolekylär kraft är starkast?",
+    "choices": [
+      "Vätebindning",
+      "Dipol-dipol",
+      "London-krafter",
+      "Jon-dipol"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! Vätebindning är starkast.",
+        "Fel. Dipol-dipol är svagare.",
+        "Fel. London-krafter är svagast.",
+        "Fel. Jon-dipol är mellan joner och molekyler."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Vilken intermolekylär kraft är starkast?. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 4,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  },
+  {
+    "id": "chemistry-item-024",
+    "skillId": "intermolekylara-krafter",
+    "type": "mcq",
+    "prompt": "Beräkna elektronegativitetsskillnaden mellan H och Cl.",
+    "choices": [
+      "0.9",
+      "1.1",
+      "1.3",
+      "1.5"
+    ],
+    "answer": {
+      "correctIndex": 0,
+      "rationales": [
+        "Korrekt! H=2.1, Cl=3.0, skillnad=0.9.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden.",
+        "Fel. Räkna om elektronegativitetsskillnaden."
+      ]
+    },
+    "explanation": "Kemisk förklaring för Beräkna elektronegativitetsskillnaden mellan H och Cl.. Tänk på bindningstyper och elektronstruktur.",
+    "difficulty": 5,
+    "tags": [
+      "bindning",
+      "molekyler"
+    ]
+  }
+]

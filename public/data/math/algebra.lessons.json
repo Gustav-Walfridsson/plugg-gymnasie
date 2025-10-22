@@ -1,0 +1,37 @@
+[
+  {
+    "id": "lesson-001",
+    "skillId": "variabler-uttryck",
+    "title": "Variabler och uttryck - Lektion 1",
+    "content": "Detta är innehållet för Variabler och uttryck lektion 1. Här lär du dig grundläggande koncept och metoder.",
+    "order": 1
+  },
+  {
+    "id": "lesson-002",
+    "skillId": "enkla-ekvationer",
+    "title": "Enkla ekvationer - Lektion 2",
+    "content": "Detta är innehållet för Enkla ekvationer lektion 2. Här lär du dig grundläggande koncept och metoder.",
+    "order": 2
+  },
+  {
+    "id": "lesson-003",
+    "skillId": "parenteser",
+    "title": "Parenteser och förenkling - Lektion 3",
+    "content": "Detta är innehållet för Parenteser och förenkling lektion 3. Här lär du dig grundläggande koncept och metoder.",
+    "order": 3
+  },
+  {
+    "id": "lesson-004",
+    "skillId": "kvadratiska-uttryck",
+    "title": "Kvadratiska uttryck - Lektion 4",
+    "content": "Detta är innehållet för Kvadratiska uttryck lektion 4. Här lär du dig grundläggande koncept och metoder.",
+    "order": 4
+  },
+  {
+    "id": "lesson-005",
+    "skillId": "kvadratiska-ekvationer",
+    "title": "Kvadratiska ekvationer - Lektion 5",
+    "content": "Detta är innehållet för Kvadratiska ekvationer lektion 5. Här lär du dig grundläggande koncept och metoder.",
+    "order": 5
+  }
+]

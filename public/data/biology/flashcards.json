@@ -1,0 +1,122 @@
+[
+  {
+    "id": "bio-flash-001",
+    "type": "flashcard",
+    "front": "DNA",
+    "back": "Deoxyribonucleic acid - arvsmassan som innehåller genetisk information"
+  },
+  {
+    "id": "bio-flash-002",
+    "type": "flashcard",
+    "front": "RNA",
+    "back": "Ribonucleic acid - kopierar DNA-information för proteinsyntes"
+  },
+  {
+    "id": "bio-flash-003",
+    "type": "flashcard",
+    "front": "Gen",
+    "back": "Enhet av arvsmassa som kodar för ett specifikt protein"
+  },
+  {
+    "id": "bio-flash-004",
+    "type": "flashcard",
+    "front": "Alleler",
+    "back": "Olika versioner av samma gen"
+  },
+  {
+    "id": "bio-flash-005",
+    "type": "flashcard",
+    "front": "Genotyp",
+    "back": "Genetisk sammansättning av en organism"
+  },
+  {
+    "id": "bio-flash-006",
+    "type": "flashcard",
+    "front": "Fenotyp",
+    "back": "Synliga egenskaper hos en organism"
+  },
+  {
+    "id": "bio-flash-007",
+    "type": "flashcard",
+    "front": "Homozygot",
+    "back": "Organism med samma alleler för en gen"
+  },
+  {
+    "id": "bio-flash-008",
+    "type": "flashcard",
+    "front": "Heterozygot",
+    "back": "Organism med olika alleler för en gen"
+  },
+  {
+    "id": "bio-flash-009",
+    "type": "flashcard",
+    "front": "Dominant",
+    "back": "Allele som uttrycks även i heterozygot tillstånd"
+  },
+  {
+    "id": "bio-flash-010",
+    "type": "flashcard",
+    "front": "Recessiv",
+    "back": "Allele som bara uttrycks i homozygot tillstånd"
+  },
+  {
+    "id": "bio-flash-011",
+    "type": "flashcard",
+    "front": "Mutation",
+    "back": "Förändring i DNA-sekvensen"
+  },
+  {
+    "id": "bio-flash-012",
+    "type": "flashcard",
+    "front": "Replikation",
+    "back": "Processen när DNA kopieras"
+  },
+  {
+    "id": "bio-flash-013",
+    "type": "flashcard",
+    "front": "Transkription",
+    "back": "Processen när DNA översätts till RNA"
+  },
+  {
+    "id": "bio-flash-014",
+    "type": "flashcard",
+    "front": "Translation",
+    "back": "Processen när RNA översätts till protein"
+  },
+  {
+    "id": "bio-flash-015",
+    "type": "flashcard",
+    "front": "Kromosom",
+    "back": "Struktur som innehåller DNA och proteiner"
+  },
+  {
+    "id": "bio-flash-016",
+    "type": "flashcard",
+    "front": "Mitosis",
+    "back": "Cellindelning som skapar identiska dotterceller"
+  },
+  {
+    "id": "bio-flash-017",
+    "type": "flashcard",
+    "front": "Meiosis",
+    "back": "Cellindelning som skapar könsceller"
+  },
+  {
+    "id": "bio-flash-018",
+    "type": "flashcard",
+    "front": "Gamet",
+    "back": "Könscell (spermie eller ägg)"
+  },
+  {
+    "id": "bio-flash-019",
+    "type": "flashcard",
+    "front": "Zygot",
+    "back": "Befruktad äggcell"
+  },
+  {
+    "id": "bio-flash-020",
+    "type": "flashcard",
+    "front": "Fenotypisk variation",
+    "back": "Variation i synliga egenskaper"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "eng-flash-001",
+    "type": "flashcard",
+    "front": "abundant",
+    "back": "riklig, överflödande"
+  },
+  {
+    "id": "eng-flash-002",
+    "type": "flashcard",
+    "front": "acquire",
+    "back": "förvärva, skaffa sig"
+  },
+  {
+    "id": "eng-flash-003",
+    "type": "flashcard",
+    "front": "adequate",
+    "back": "tillräcklig, lämplig"
+  },
+  {
+    "id": "eng-flash-004",
+    "type": "flashcard",
+    "front": "analyze",
+    "back": "analysera, undersöka"
+  },
+  {
+    "id": "eng-flash-005",
+    "type": "flashcard",
+    "front": "apparent",
+    "back": "tydlig, uppenbar"
+  },
+  {
+    "id": "eng-flash-006",
+    "type": "flashcard",
+    "front": "approach",
+    "back": "närma sig, metod"
+  },
+  {
+    "id": "eng-flash-007",
+    "type": "flashcard",
+    "front": "appropriate",
+    "back": "lämplig, passande"
+  },
+  {
+    "id": "eng-flash-008",
+    "type": "flashcard",
+    "front": "approximately",
+    "back": "ungefär, cirka"
+  },
+  {
+    "id": "eng-flash-009",
+    "type": "flashcard",
+    "front": "argument",
+    "back": "argument, diskussion"
+  },
+  {
+    "id": "eng-flash-010",
+    "type": "flashcard",
+    "front": "assume",
+    "back": "anta, förutsätta"
+  },
+  {
+    "id": "eng-flash-011",
+    "type": "flashcard",
+    "front": "available",
+    "back": "tillgänglig, tillgänglig"
+  },
+  {
+    "id": "eng-flash-012",
+    "type": "flashcard",
+    "front": "benefit",
+    "back": "fördel, gagn"
+  },
+  {
+    "id": "eng-flash-013",
+    "type": "flashcard",
+    "front": "circumstance",
+    "back": "omständighet, situation"
+  },
+  {
+    "id": "eng-flash-014",
+    "type": "flashcard",
+    "front": "concept",
+    "back": "begrepp, idé"
+  },
+  {
+    "id": "eng-flash-015",
+    "type": "flashcard",
+    "front": "consequence",
+    "back": "konsekvens, följd"
+  },
+  {
+    "id": "eng-flash-016",
+    "type": "flashcard",
+    "front": "consider",
+    "back": "överväga, betrakta"
+  },
+  {
+    "id": "eng-flash-017",
+    "type": "flashcard",
+    "front": "consist",
+    "back": "bestå av, innehålla"
+  },
+  {
+    "id": "eng-flash-018",
+    "type": "flashcard",
+    "front": "constitute",
+    "back": "utgöra, bilda"
+  },
+  {
+    "id": "eng-flash-019",
+    "type": "flashcard",
+    "front": "context",
+    "back": "sammanhang, kontext"
+  },
+  {
+    "id": "eng-flash-020",
+    "type": "flashcard",
+    "front": "contrast",
+    "back": "kontrast, skillnad"
+  },
+  {
+    "id": "eng-flash-021",
+    "type": "flashcard",
+    "front": "contribute",
+    "back": "bidra, bidra till"
+  },
+  {
+    "id": "eng-flash-022",
+    "type": "flashcard",
+    "front": "conversely",
+    "back": "omvänt, tvärtom"
+  },
+  {
+    "id": "eng-flash-023",
+    "type": "flashcard",
+    "front": "correspond",
+    "back": "motsvara, överensstämma"
+  },
+  {
+    "id": "eng-flash-024",
+    "type": "flashcard",
+    "front": "criteria",
+    "back": "kriterier, mått"
+  },
+  {
+    "id": "eng-flash-025",
+    "type": "flashcard",
+    "front": "crucial",
+    "back": "avgörande, kritisk"
+  },
+  {
+    "id": "eng-flash-026",
+    "type": "flashcard",
+    "front": "culture",
+    "back": "kultur, odling"
+  },
+  {
+    "id": "eng-flash-027",
+    "type": "flashcard",
+    "front": "data",
+    "back": "data, uppgifter"
+  },
+  {
+    "id": "eng-flash-028",
+    "type": "flashcard",
+    "front": "define",
+    "back": "definiera, bestämma"
+  },
+  {
+    "id": "eng-flash-029",
+    "type": "flashcard",
+    "front": "demonstrate",
+    "back": "demonstrera, visa"
+  },
+  {
+    "id": "eng-flash-030",
+    "type": "flashcard",
+    "front": "derive",
+    "back": "härleda, få"
+  },
+  {
+    "id": "eng-flash-031",
+    "type": "flashcard",
+    "front": "design",
+    "back": "design, konstruktion"
+  },
+  {
+    "id": "eng-flash-032",
+    "type": "flashcard",
+    "front": "determine",
+    "back": "bestämma, fastställa"
+  },
+  {
+    "id": "eng-flash-033",
+    "type": "flashcard",
+    "front": "develop",
+    "back": "utveckla, utveckla"
+  },
+  {
+    "id": "eng-flash-034",
+    "type": "flashcard",
+    "front": "device",
+    "back": "anordning, apparat"
+  },
+  {
+    "id": "eng-flash-035",
+    "type": "flashcard",
+    "front": "distinct",
+    "back": "tydlig, distinkt"
+  },
+  {
+    "id": "eng-flash-036",
+    "type": "flashcard",
+    "front": "distribute",
+    "back": "fördela, sprida"
+  },
+  {
+    "id": "eng-flash-037",
+    "type": "flashcard",
+    "front": "economic",
+    "back": "ekonomisk, ekonomisk"
+  },
+  {
+    "id": "eng-flash-038",
+    "type": "flashcard",
+    "front": "element",
+    "back": "element, beståndsdel"
+  },
+  {
+    "id": "eng-flash-039",
+    "type": "flashcard",
+    "front": "eliminate",
+    "back": "eliminera, ta bort"
+  },
+  {
+    "id": "eng-flash-040",
+    "type": "flashcard",
+    "front": "emerge",
+    "back": "uppstå, framträda"
+  },
+  {
+    "id": "eng-flash-041",
+    "type": "flashcard",
+    "front": "emphasis",
+    "back": "betoning, fokus"
+  },
+  {
+    "id": "eng-flash-042",
+    "type": "flashcard",
+    "front": "enable",
+    "back": "möjliggöra, aktivera"
+  },
+  {
+    "id": "eng-flash-043",
+    "type": "flashcard",
+    "front": "energy",
+    "back": "energi, kraft"
+  },
+  {
+    "id": "eng-flash-044",
+    "type": "flashcard",
+    "front": "ensure",
+    "back": "säkerställa, garantera"
+  },
+  {
+    "id": "eng-flash-045",
+    "type": "flashcard",
+    "front": "environment",
+    "back": "miljö, omgivning"
+  },
+  {
+    "id": "eng-flash-046",
+    "type": "flashcard",
+    "front": "equate",
+    "back": "likställa, jämföra"
+  },
+  {
+    "id": "eng-flash-047",
+    "type": "flashcard",
+    "front": "equivalent",
+    "back": "motsvarande, likvärdig"
+  },
+  {
+    "id": "eng-flash-048",
+    "type": "flashcard",
+    "front": "establish",
+    "back": "etablera, fastställa"
+  },
+  {
+    "id": "eng-flash-049",
+    "type": "flashcard",
+    "front": "estimate",
+    "back": "uppskatta, beräkna"
+  },
+  {
+    "id": "eng-flash-050",
+    "type": "flashcard",
+    "front": "evaluate",
+    "back": "utvärdera, bedöma"
+  }
+]

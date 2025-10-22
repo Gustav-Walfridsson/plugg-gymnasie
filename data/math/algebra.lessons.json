@@ -1,0 +1,37 @@
+[
+  {
+    "id": "lesson-001",
+    "skillId": "variabler-uttryck",
+    "title": "Variabler och uttryck - Grundläggande",
+    "content": "## Vad är en variabel?\n\nEn variabel är en bokstav eller symbol som representerar ett okänt värde. I matematik använder vi ofta bokstäver som x, y, z för att representera variabler.\n\n## Exempel på variabler:\n- x = 5 (x är en variabel med värdet 5)\n- y = 2x + 3 (y är en variabel som beror på x)\n- a = 10, b = 7 (a och b är variabler)\n\n## Algebraiska uttryck\n\nEtt algebraiskt uttryck är en kombination av variabler, tal och räkneoperationer (+, -, ×, ÷).\n\n### Exempel:\n- 2x + 5\n- 3y - 7\n- x² + 2x - 1\n- 4a + 3b - 2c\n\n## Viktiga regler:\n1. När vi multiplicerar ett tal med en variabel skriver vi talet först: 2x, inte x2\n2. Vi kan addera och subtrahera termer med samma variabel: 2x + 3x = 5x\n3. Vi kan inte addera termer med olika variabler: 2x + 3y kan inte förenklas\n\n## Övning:\nFörenkla uttrycket: 3x + 2x - 5 + 7\n\nLösning: 3x + 2x - 5 + 7 = 5x + 2",
+    "order": 1
+  },
+  {
+    "id": "lesson-002",
+    "skillId": "enkla-ekvationer",
+    "title": "Enkla ekvationer - Grundläggande",
+    "content": "## Vad är en ekvation?\n\nEn ekvation är en matematisk likhet som innehåller en eller flera variabler. Vi löser ekvationer genom att hitta värdet på variabeln som gör likheten sann.\n\n## Exempel på enkla ekvationer:\n- x + 3 = 7\n- 2x = 10\n- x - 4 = 8\n- x/3 = 5\n\n## Metod för att lösa enkla ekvationer:\n\n### Steg 1: Identifiera operationen\nTitta på vad som görs med variabeln.\n\n### Steg 2: Använd motsatt operation\nFör att lösa ekvationen använder vi den motsatta operationen på båda sidor.\n\n### Steg 3: Kontrollera svaret\nSätt in värdet i den ursprungliga ekvationen.\n\n## Exempel 1: x + 3 = 7\n1. Operation: addition (+3)\n2. Motsatt operation: subtraktion (-3)\n3. x + 3 - 3 = 7 - 3\n4. x = 4\n5. Kontroll: 4 + 3 = 7 ✓\n\n## Exempel 2: 2x = 10\n1. Operation: multiplikation (×2)\n2. Motsatt operation: division (÷2)\n3. 2x ÷ 2 = 10 ÷ 2\n4. x = 5\n5. Kontroll: 2 × 5 = 10 ✓\n\n## Övning:\nLös ekvationen: 3x - 7 = 14\n\nLösning:\n3x - 7 = 14\n3x - 7 + 7 = 14 + 7\n3x = 21\n3x ÷ 3 = 21 ÷ 3\nx = 7",
+    "order": 2
+  },
+  {
+    "id": "lesson-003",
+    "skillId": "parenteser",
+    "title": "Parenteser och förenkling",
+    "content": "## Parenteser i algebra\n\nParenteser används för att gruppera termer och ändra ordningen på räkneoperationer. Det är viktigt att förstå hur man arbetar med parenteser korrekt.\n\n## Grundregler för parenteser:\n\n### 1. Multiplikation med parenteser\nNär ett tal multipliceras med en parentes, multipliceras talet med varje term inuti parentesen.\n\n**a(b + c) = ab + ac**\n\n### Exempel:\n- 3(x + 2) = 3x + 6\n- 2(4x - 5) = 8x - 10\n- -2(x + 3) = -2x - 6\n\n### 2. Förenkling av uttryck med parenteser\nNär vi har flera parenteser, förenklar vi steg för steg.\n\n### Exempel:\nFörenkla: 2(x + 3) + 4(x - 1)\n\nLösning:\n1. Multiplicera in: 2x + 6 + 4x - 4\n2. Samla liknande termer: 2x + 4x + 6 - 4\n3. Förenkla: 6x + 2\n\n## Faktorisering\n\nFaktorisering är motsatsen till att multiplicera in - vi tar ut gemensamma faktorer.\n\n### Exempel:\nFaktorisera: 6x + 9\n\nLösning:\n1. Hitta gemensam faktor: 3\n2. 6x + 9 = 3(2x + 3)\n\n## Övning:\nFörenkla uttrycket: 3(2x + 1) - 2(x - 4)\n\nLösning:\n3(2x + 1) - 2(x - 4)\n= 6x + 3 - 2x + 8\n= 6x - 2x + 3 + 8\n= 4x + 11",
+    "order": 3
+  },
+  {
+    "id": "lesson-004",
+    "skillId": "kvadratiska-uttryck",
+    "title": "Kvadratiska uttryck - Grundläggande",
+    "content": "## Vad är ett kvadratiskt uttryck?\n\nEtt kvadratiskt uttryck är ett polynom av andra graden, vilket betyder att den högsta exponenten är 2.\n\n## Allmän form:\n**ax² + bx + c**\n\ndär a, b och c är konstanter och a ≠ 0\n\n## Exempel på kvadratiska uttryck:\n- x² + 5x + 6\n- 2x² - 3x + 1\n- x² - 9\n- 3x² + 7x - 2\n\n## Faktorisering av kvadratiska uttryck\n\n### Metod 1: Faktorisering genom att hitta två tal\nFör x² + bx + c, hitta två tal som:\n- Multiplicerade ger c\n- Adderade ger b\n\n### Exempel:\nFaktorisera x² + 5x + 6\n\n1. Hitta två tal som multiplicerade ger 6: 1×6, 2×3\n2. Hitta vilka som adderade ger 5: 2 + 3 = 5\n3. x² + 5x + 6 = (x + 2)(x + 3)\n\n### Kontroll:\n(x + 2)(x + 3) = x² + 3x + 2x + 6 = x² + 5x + 6 ✓\n\n## Kvadreringsregler\n\n### (a + b)² = a² + 2ab + b²\n### (a - b)² = a² - 2ab + b²\n### (a + b)(a - b) = a² - b²\n\n## Övning:\nFaktorisera: x² - 7x + 12\n\nLösning:\n1. Hitta två tal som multiplicerade ger 12: 1×12, 2×6, 3×4\n2. Hitta vilka som adderade ger -7: -3 + (-4) = -7\n3. x² - 7x + 12 = (x - 3)(x - 4)",
+    "order": 4
+  },
+  {
+    "id": "lesson-005",
+    "skillId": "kvadratiska-ekvationer",
+    "title": "Kvadratiska ekvationer - Lösning",
+    "content": "## Vad är en kvadratisk ekvation?\n\nEn kvadratisk ekvation är en ekvation av formen ax² + bx + c = 0, där a ≠ 0.\n\n## Metoder för att lösa kvadratiska ekvationer:\n\n### 1. Faktorisering\nOm ekvationen kan faktoriseras, använd nollproduktregeln.\n\n**Nollproduktregeln:** Om ab = 0, så är a = 0 eller b = 0\n\n### Exempel:\nLös x² - 5x + 6 = 0\n\n1. Faktorisera: (x - 2)(x - 3) = 0\n2. Använd nollproduktregeln:\n   - x - 2 = 0 → x = 2\n   - x - 3 = 0 → x = 3\n3. Lösningarna är x = 2 och x = 3\n\n### 2. Kvadratrotsmetoden\nFör ekvationer av formen x² = k\n\n### Exempel:\nLös x² = 25\n\nx = ±√25 = ±5\n\n### 3. Kvadratkomplettering\nFör ekvationer som inte kan faktoriseras enkelt.\n\n### 4. PQ-formeln\nFör ekvationer av formen x² + px + q = 0\n\n**x = -p/2 ± √((p/2)² - q)**\n\n### Exempel:\nLös x² + 6x + 8 = 0\n\np = 6, q = 8\nx = -6/2 ± √((6/2)² - 8)\nx = -3 ± √(9 - 8)\nx = -3 ± √1\nx = -3 ± 1\nx = -2 eller x = -4\n\n## Övning:\nLös ekvationen: x² - 4x + 3 = 0\n\nLösning:\n1. Faktorisera: (x - 1)(x - 3) = 0\n2. x - 1 = 0 → x = 1\n3. x - 3 = 0 → x = 3\n4. Lösningarna är x = 1 och x = 3",
+    "order": 5
+  }
+]

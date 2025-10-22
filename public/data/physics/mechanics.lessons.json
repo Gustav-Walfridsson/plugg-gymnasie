@@ -1,0 +1,37 @@
+[
+  {
+    "id": "lesson-001",
+    "skillId": "kraft-begrepp",
+    "title": "Kraft och kraftbegrepp - Lektion 1",
+    "content": "Detta är innehållet för Kraft och kraftbegrepp lektion 1. Här lär du dig grundläggande koncept och metoder.",
+    "order": 1
+  },
+  {
+    "id": "lesson-002",
+    "skillId": "newtons-lagar",
+    "title": "Newtons lagar - Lektion 2",
+    "content": "Detta är innehållet för Newtons lagar lektion 2. Här lär du dig grundläggande koncept och metoder.",
+    "order": 2
+  },
+  {
+    "id": "lesson-003",
+    "skillId": "rörelse-beskrivning",
+    "title": "Rörelse och hastighet - Lektion 3",
+    "content": "Detta är innehållet för Rörelse och hastighet lektion 3. Här lär du dig grundläggande koncept och metoder.",
+    "order": 3
+  },
+  {
+    "id": "lesson-004",
+    "skillId": "energi-begrepp",
+    "title": "Energi och energiomvandling - Lektion 4",
+    "content": "Detta är innehållet för Energi och energiomvandling lektion 4. Här lär du dig grundläggande koncept och metoder.",
+    "order": 4
+  },
+  {
+    "id": "lesson-005",
+    "skillId": "arbete-effekt",
+    "title": "Arbete och effekt - Lektion 5",
+    "content": "Detta är innehållet för Arbete och effekt lektion 5. Här lär du dig grundläggande koncept och metoder.",
+    "order": 5
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "lesson-001",
+    "skillId": "cellstruktur",
+    "title": "Cellstruktur - Lektion 1",
+    "content": "Detta är innehållet för Cellstruktur lektion 1. Här lär du dig grundläggande koncept och metoder.",
+    "order": 1
+  },
+  {
+    "id": "lesson-002",
+    "skillId": "dna-struktur",
+    "title": "DNA-struktur - Lektion 2",
+    "content": "Detta är innehållet för DNA-struktur lektion 2. Här lär du dig grundläggande koncept och metoder.",
+    "order": 2
+  },
+  {
+    "id": "lesson-003",
+    "skillId": "genetisk-kod",
+    "title": "Genetisk kod - Lektion 3",
+    "content": "Detta är innehållet för Genetisk kod lektion 3. Här lär du dig grundläggande koncept och metoder.",
+    "order": 3
+  },
+  {
+    "id": "lesson-004",
+    "skillId": "arvslagar",
+    "title": "Mendels arvslagar - Lektion 4",
+    "content": "Detta är innehållet för Mendels arvslagar lektion 4. Här lär du dig grundläggande koncept och metoder.",
+    "order": 4
+  },
+  {
+    "id": "lesson-005",
+    "skillId": "mutationer",
+    "title": "Mutationer och variation - Lektion 5",
+    "content": "Detta är innehållet för Mutationer och variation lektion 5. Här lär du dig grundläggande koncept och metoder.",
+    "order": 5
+  }
+]

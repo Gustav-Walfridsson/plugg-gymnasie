@@ -1,0 +1,452 @@
+[
+  {
+    "id": "physics-item-000",
+    "skillId": "kraft-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna hastigheten: s = 100m, t = 10s",
+    "latex": "v = \\frac{s}{t} = \\frac{100}{10}",
+    "answer": {
+      "value": 10,
+      "unit": "m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna hastigheten: s = 100m, t = 10s. Använd rätt formel och enheter.",
+    "difficulty": 1,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-001",
+    "skillId": "newtons-lagar",
+    "type": "numeric",
+    "prompt": "Beräkna kraften: m = 5kg, a = 2m/s²",
+    "latex": "F = ma = 5 \\cdot 2",
+    "answer": {
+      "value": 10,
+      "unit": "N",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna kraften: m = 5kg, a = 2m/s². Använd rätt formel och enheter.",
+    "difficulty": 2,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-002",
+    "skillId": "rörelse-beskrivning",
+    "type": "numeric",
+    "prompt": "Beräkna rörelseenergin: m = 2kg, v = 5m/s",
+    "latex": "E_k = \\frac{1}{2}mv^2",
+    "answer": {
+      "value": 25,
+      "unit": "J",
+      "tol": 0.5
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelseenergin: m = 2kg, v = 5m/s. Använd rätt formel och enheter.",
+    "difficulty": 3,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-003",
+    "skillId": "energi-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna effekten: W = 100J, t = 5s",
+    "latex": "P = \\frac{W}{t} = \\frac{100}{5}",
+    "answer": {
+      "value": 20,
+      "unit": "W",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna effekten: W = 100J, t = 5s. Använd rätt formel och enheter.",
+    "difficulty": 4,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-004",
+    "skillId": "arbete-effekt",
+    "type": "numeric",
+    "prompt": "Beräkna rörelsemängden: m = 3kg, v = 8m/s",
+    "latex": "p = mv = 3 \\cdot 8",
+    "answer": {
+      "value": 24,
+      "unit": "kg⋅m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelsemängden: m = 3kg, v = 8m/s. Använd rätt formel och enheter.",
+    "difficulty": 5,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-005",
+    "skillId": "kraft-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna hastigheten: s = 100m, t = 10s",
+    "latex": "v = \\frac{s}{t} = \\frac{100}{10}",
+    "answer": {
+      "value": 10,
+      "unit": "m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna hastigheten: s = 100m, t = 10s. Använd rätt formel och enheter.",
+    "difficulty": 1,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-006",
+    "skillId": "newtons-lagar",
+    "type": "numeric",
+    "prompt": "Beräkna kraften: m = 5kg, a = 2m/s²",
+    "latex": "F = ma = 5 \\cdot 2",
+    "answer": {
+      "value": 10,
+      "unit": "N",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna kraften: m = 5kg, a = 2m/s². Använd rätt formel och enheter.",
+    "difficulty": 2,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-007",
+    "skillId": "rörelse-beskrivning",
+    "type": "numeric",
+    "prompt": "Beräkna rörelseenergin: m = 2kg, v = 5m/s",
+    "latex": "E_k = \\frac{1}{2}mv^2",
+    "answer": {
+      "value": 25,
+      "unit": "J",
+      "tol": 0.5
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelseenergin: m = 2kg, v = 5m/s. Använd rätt formel och enheter.",
+    "difficulty": 3,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-008",
+    "skillId": "energi-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna effekten: W = 100J, t = 5s",
+    "latex": "P = \\frac{W}{t} = \\frac{100}{5}",
+    "answer": {
+      "value": 20,
+      "unit": "W",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna effekten: W = 100J, t = 5s. Använd rätt formel och enheter.",
+    "difficulty": 4,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-009",
+    "skillId": "arbete-effekt",
+    "type": "numeric",
+    "prompt": "Beräkna rörelsemängden: m = 3kg, v = 8m/s",
+    "latex": "p = mv = 3 \\cdot 8",
+    "answer": {
+      "value": 24,
+      "unit": "kg⋅m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelsemängden: m = 3kg, v = 8m/s. Använd rätt formel och enheter.",
+    "difficulty": 5,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-010",
+    "skillId": "kraft-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna hastigheten: s = 100m, t = 10s",
+    "latex": "v = \\frac{s}{t} = \\frac{100}{10}",
+    "answer": {
+      "value": 10,
+      "unit": "m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna hastigheten: s = 100m, t = 10s. Använd rätt formel och enheter.",
+    "difficulty": 1,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-011",
+    "skillId": "newtons-lagar",
+    "type": "numeric",
+    "prompt": "Beräkna kraften: m = 5kg, a = 2m/s²",
+    "latex": "F = ma = 5 \\cdot 2",
+    "answer": {
+      "value": 10,
+      "unit": "N",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna kraften: m = 5kg, a = 2m/s². Använd rätt formel och enheter.",
+    "difficulty": 2,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-012",
+    "skillId": "rörelse-beskrivning",
+    "type": "numeric",
+    "prompt": "Beräkna rörelseenergin: m = 2kg, v = 5m/s",
+    "latex": "E_k = \\frac{1}{2}mv^2",
+    "answer": {
+      "value": 25,
+      "unit": "J",
+      "tol": 0.5
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelseenergin: m = 2kg, v = 5m/s. Använd rätt formel och enheter.",
+    "difficulty": 3,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-013",
+    "skillId": "energi-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna effekten: W = 100J, t = 5s",
+    "latex": "P = \\frac{W}{t} = \\frac{100}{5}",
+    "answer": {
+      "value": 20,
+      "unit": "W",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna effekten: W = 100J, t = 5s. Använd rätt formel och enheter.",
+    "difficulty": 4,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-014",
+    "skillId": "arbete-effekt",
+    "type": "numeric",
+    "prompt": "Beräkna rörelsemängden: m = 3kg, v = 8m/s",
+    "latex": "p = mv = 3 \\cdot 8",
+    "answer": {
+      "value": 24,
+      "unit": "kg⋅m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelsemängden: m = 3kg, v = 8m/s. Använd rätt formel och enheter.",
+    "difficulty": 5,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-015",
+    "skillId": "kraft-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna hastigheten: s = 100m, t = 10s",
+    "latex": "v = \\frac{s}{t} = \\frac{100}{10}",
+    "answer": {
+      "value": 10,
+      "unit": "m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna hastigheten: s = 100m, t = 10s. Använd rätt formel och enheter.",
+    "difficulty": 1,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-016",
+    "skillId": "newtons-lagar",
+    "type": "numeric",
+    "prompt": "Beräkna kraften: m = 5kg, a = 2m/s²",
+    "latex": "F = ma = 5 \\cdot 2",
+    "answer": {
+      "value": 10,
+      "unit": "N",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna kraften: m = 5kg, a = 2m/s². Använd rätt formel och enheter.",
+    "difficulty": 2,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-017",
+    "skillId": "rörelse-beskrivning",
+    "type": "numeric",
+    "prompt": "Beräkna rörelseenergin: m = 2kg, v = 5m/s",
+    "latex": "E_k = \\frac{1}{2}mv^2",
+    "answer": {
+      "value": 25,
+      "unit": "J",
+      "tol": 0.5
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelseenergin: m = 2kg, v = 5m/s. Använd rätt formel och enheter.",
+    "difficulty": 3,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-018",
+    "skillId": "energi-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna effekten: W = 100J, t = 5s",
+    "latex": "P = \\frac{W}{t} = \\frac{100}{5}",
+    "answer": {
+      "value": 20,
+      "unit": "W",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna effekten: W = 100J, t = 5s. Använd rätt formel och enheter.",
+    "difficulty": 4,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-019",
+    "skillId": "arbete-effekt",
+    "type": "numeric",
+    "prompt": "Beräkna rörelsemängden: m = 3kg, v = 8m/s",
+    "latex": "p = mv = 3 \\cdot 8",
+    "answer": {
+      "value": 24,
+      "unit": "kg⋅m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelsemängden: m = 3kg, v = 8m/s. Använd rätt formel och enheter.",
+    "difficulty": 5,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-020",
+    "skillId": "kraft-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna hastigheten: s = 100m, t = 10s",
+    "latex": "v = \\frac{s}{t} = \\frac{100}{10}",
+    "answer": {
+      "value": 10,
+      "unit": "m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna hastigheten: s = 100m, t = 10s. Använd rätt formel och enheter.",
+    "difficulty": 1,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-021",
+    "skillId": "newtons-lagar",
+    "type": "numeric",
+    "prompt": "Beräkna kraften: m = 5kg, a = 2m/s²",
+    "latex": "F = ma = 5 \\cdot 2",
+    "answer": {
+      "value": 10,
+      "unit": "N",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna kraften: m = 5kg, a = 2m/s². Använd rätt formel och enheter.",
+    "difficulty": 2,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-022",
+    "skillId": "rörelse-beskrivning",
+    "type": "numeric",
+    "prompt": "Beräkna rörelseenergin: m = 2kg, v = 5m/s",
+    "latex": "E_k = \\frac{1}{2}mv^2",
+    "answer": {
+      "value": 25,
+      "unit": "J",
+      "tol": 0.5
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelseenergin: m = 2kg, v = 5m/s. Använd rätt formel och enheter.",
+    "difficulty": 3,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-023",
+    "skillId": "energi-begrepp",
+    "type": "numeric",
+    "prompt": "Beräkna effekten: W = 100J, t = 5s",
+    "latex": "P = \\frac{W}{t} = \\frac{100}{5}",
+    "answer": {
+      "value": 20,
+      "unit": "W",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna effekten: W = 100J, t = 5s. Använd rätt formel och enheter.",
+    "difficulty": 4,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  },
+  {
+    "id": "physics-item-024",
+    "skillId": "arbete-effekt",
+    "type": "numeric",
+    "prompt": "Beräkna rörelsemängden: m = 3kg, v = 8m/s",
+    "latex": "p = mv = 3 \\cdot 8",
+    "answer": {
+      "value": 24,
+      "unit": "kg⋅m/s",
+      "tol": 0.1
+    },
+    "explanation": "Fysikalisk förklaring för Beräkna rörelsemängden: m = 3kg, v = 8m/s. Använd rätt formel och enheter.",
+    "difficulty": 5,
+    "tags": [
+      "mekanik",
+      "beräkningar"
+    ]
+  }
+]

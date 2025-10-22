@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "swedish-item-000",
+    "skillId": "meningsbyggnad",
+    "type": "freeText",
+    "prompt": "Skriv en mening om vädret idag.",
+    "answer": {
+      "modelAnswer": "Det är vackert väder idag med sol och blå himmel."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en mening om vädret idag.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 1,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel mening med grundläggande struktur",
+      "levelC": "Tydlig mening med varierad ordföljd",
+      "levelA": "Engagerande mening med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "väder",
+        "vackert",
+        "sol",
+        "himmel"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-001",
+    "skillId": "styckesstruktur",
+    "type": "freeText",
+    "prompt": "Beskriv ditt favoritdjur i 2-3 meningar.",
+    "answer": {
+      "modelAnswer": "Min favorit är katten eftersom den är mysig och självständig."
+    },
+    "explanation": "Svensk skrivförklaring för Beskriv ditt favoritdjur i 2-3 meningar.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 2,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla meningar med grundläggande beskrivning",
+      "levelC": "Tydliga meningar med varierad struktur",
+      "levelA": "Engagerande beskrivning med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favoritdjur",
+        "beskrivning",
+        "egenskaper"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-002",
+    "skillId": "argumentation",
+    "type": "freeText",
+    "prompt": "Argumentera för varför skolan är viktig.",
+    "answer": {
+      "modelAnswer": "Skolan är viktig eftersom den ger oss kunskap och förbereder oss för framtiden."
+    },
+    "explanation": "Svensk skrivförklaring för Argumentera för varför skolan är viktig.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 3,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla argument med grundläggande struktur",
+      "levelC": "Tydliga argument med logisk uppbyggnad",
+      "levelA": "Övertygande argument med avancerad retorik",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "argument",
+        "skola",
+        "viktig",
+        "kunskap"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-003",
+    "skillId": "textanalys",
+    "type": "freeText",
+    "prompt": "Analysera temat i en kort text om vänskap.",
+    "answer": {
+      "modelAnswer": "Texten handlar om vänskapens betydelse och hur den påverkar människor."
+    },
+    "explanation": "Svensk skrivförklaring för Analysera temat i en kort text om vänskap.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 4,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel analys med grundläggande förståelse",
+      "levelC": "Tydlig analys med logisk struktur",
+      "levelA": "Djupgående analys med avancerad insikt",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analys",
+        "tema",
+        "vänskap",
+        "betydelse"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-004",
+    "skillId": "kreativt-skrivande",
+    "type": "freeText",
+    "prompt": "Skriv en kreativ berättelse om en magisk skog.",
+    "answer": {
+      "modelAnswer": "I den magiska skogen växte träden mot himlen och viskade hemligheter."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en kreativ berättelse om en magisk skog.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 5,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel berättelse med grundläggande struktur",
+      "levelC": "Tydlig berättelse med varierad stil",
+      "levelA": "Engagerande berättelse med avancerat språk",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "kreativ",
+        "berättelse",
+        "magisk",
+        "skog"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-005",
+    "skillId": "meningsbyggnad",
+    "type": "freeText",
+    "prompt": "Skriv en mening om vädret idag.",
+    "answer": {
+      "modelAnswer": "Det är vackert väder idag med sol och blå himmel."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en mening om vädret idag.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 1,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel mening med grundläggande struktur",
+      "levelC": "Tydlig mening med varierad ordföljd",
+      "levelA": "Engagerande mening med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "väder",
+        "vackert",
+        "sol",
+        "himmel"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-006",
+    "skillId": "styckesstruktur",
+    "type": "freeText",
+    "prompt": "Beskriv ditt favoritdjur i 2-3 meningar.",
+    "answer": {
+      "modelAnswer": "Min favorit är katten eftersom den är mysig och självständig."
+    },
+    "explanation": "Svensk skrivförklaring för Beskriv ditt favoritdjur i 2-3 meningar.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 2,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla meningar med grundläggande beskrivning",
+      "levelC": "Tydliga meningar med varierad struktur",
+      "levelA": "Engagerande beskrivning med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favoritdjur",
+        "beskrivning",
+        "egenskaper"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-007",
+    "skillId": "argumentation",
+    "type": "freeText",
+    "prompt": "Argumentera för varför skolan är viktig.",
+    "answer": {
+      "modelAnswer": "Skolan är viktig eftersom den ger oss kunskap och förbereder oss för framtiden."
+    },
+    "explanation": "Svensk skrivförklaring för Argumentera för varför skolan är viktig.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 3,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla argument med grundläggande struktur",
+      "levelC": "Tydliga argument med logisk uppbyggnad",
+      "levelA": "Övertygande argument med avancerad retorik",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "argument",
+        "skola",
+        "viktig",
+        "kunskap"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-008",
+    "skillId": "textanalys",
+    "type": "freeText",
+    "prompt": "Analysera temat i en kort text om vänskap.",
+    "answer": {
+      "modelAnswer": "Texten handlar om vänskapens betydelse och hur den påverkar människor."
+    },
+    "explanation": "Svensk skrivförklaring för Analysera temat i en kort text om vänskap.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 4,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel analys med grundläggande förståelse",
+      "levelC": "Tydlig analys med logisk struktur",
+      "levelA": "Djupgående analys med avancerad insikt",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analys",
+        "tema",
+        "vänskap",
+        "betydelse"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-009",
+    "skillId": "kreativt-skrivande",
+    "type": "freeText",
+    "prompt": "Skriv en kreativ berättelse om en magisk skog.",
+    "answer": {
+      "modelAnswer": "I den magiska skogen växte träden mot himlen och viskade hemligheter."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en kreativ berättelse om en magisk skog.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 5,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel berättelse med grundläggande struktur",
+      "levelC": "Tydlig berättelse med varierad stil",
+      "levelA": "Engagerande berättelse med avancerat språk",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "kreativ",
+        "berättelse",
+        "magisk",
+        "skog"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-010",
+    "skillId": "meningsbyggnad",
+    "type": "freeText",
+    "prompt": "Skriv en mening om vädret idag.",
+    "answer": {
+      "modelAnswer": "Det är vackert väder idag med sol och blå himmel."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en mening om vädret idag.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 1,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel mening med grundläggande struktur",
+      "levelC": "Tydlig mening med varierad ordföljd",
+      "levelA": "Engagerande mening med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "väder",
+        "vackert",
+        "sol",
+        "himmel"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-011",
+    "skillId": "styckesstruktur",
+    "type": "freeText",
+    "prompt": "Beskriv ditt favoritdjur i 2-3 meningar.",
+    "answer": {
+      "modelAnswer": "Min favorit är katten eftersom den är mysig och självständig."
+    },
+    "explanation": "Svensk skrivförklaring för Beskriv ditt favoritdjur i 2-3 meningar.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 2,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla meningar med grundläggande beskrivning",
+      "levelC": "Tydliga meningar med varierad struktur",
+      "levelA": "Engagerande beskrivning med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favoritdjur",
+        "beskrivning",
+        "egenskaper"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-012",
+    "skillId": "argumentation",
+    "type": "freeText",
+    "prompt": "Argumentera för varför skolan är viktig.",
+    "answer": {
+      "modelAnswer": "Skolan är viktig eftersom den ger oss kunskap och förbereder oss för framtiden."
+    },
+    "explanation": "Svensk skrivförklaring för Argumentera för varför skolan är viktig.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 3,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla argument med grundläggande struktur",
+      "levelC": "Tydliga argument med logisk uppbyggnad",
+      "levelA": "Övertygande argument med avancerad retorik",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "argument",
+        "skola",
+        "viktig",
+        "kunskap"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-013",
+    "skillId": "textanalys",
+    "type": "freeText",
+    "prompt": "Analysera temat i en kort text om vänskap.",
+    "answer": {
+      "modelAnswer": "Texten handlar om vänskapens betydelse och hur den påverkar människor."
+    },
+    "explanation": "Svensk skrivförklaring för Analysera temat i en kort text om vänskap.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 4,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel analys med grundläggande förståelse",
+      "levelC": "Tydlig analys med logisk struktur",
+      "levelA": "Djupgående analys med avancerad insikt",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analys",
+        "tema",
+        "vänskap",
+        "betydelse"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-014",
+    "skillId": "kreativt-skrivande",
+    "type": "freeText",
+    "prompt": "Skriv en kreativ berättelse om en magisk skog.",
+    "answer": {
+      "modelAnswer": "I den magiska skogen växte träden mot himlen och viskade hemligheter."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en kreativ berättelse om en magisk skog.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 5,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel berättelse med grundläggande struktur",
+      "levelC": "Tydlig berättelse med varierad stil",
+      "levelA": "Engagerande berättelse med avancerat språk",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "kreativ",
+        "berättelse",
+        "magisk",
+        "skog"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-015",
+    "skillId": "meningsbyggnad",
+    "type": "freeText",
+    "prompt": "Skriv en mening om vädret idag.",
+    "answer": {
+      "modelAnswer": "Det är vackert väder idag med sol och blå himmel."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en mening om vädret idag.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 1,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel mening med grundläggande struktur",
+      "levelC": "Tydlig mening med varierad ordföljd",
+      "levelA": "Engagerande mening med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "väder",
+        "vackert",
+        "sol",
+        "himmel"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-016",
+    "skillId": "styckesstruktur",
+    "type": "freeText",
+    "prompt": "Beskriv ditt favoritdjur i 2-3 meningar.",
+    "answer": {
+      "modelAnswer": "Min favorit är katten eftersom den är mysig och självständig."
+    },
+    "explanation": "Svensk skrivförklaring för Beskriv ditt favoritdjur i 2-3 meningar.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 2,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla meningar med grundläggande beskrivning",
+      "levelC": "Tydliga meningar med varierad struktur",
+      "levelA": "Engagerande beskrivning med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favoritdjur",
+        "beskrivning",
+        "egenskaper"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-017",
+    "skillId": "argumentation",
+    "type": "freeText",
+    "prompt": "Argumentera för varför skolan är viktig.",
+    "answer": {
+      "modelAnswer": "Skolan är viktig eftersom den ger oss kunskap och förbereder oss för framtiden."
+    },
+    "explanation": "Svensk skrivförklaring för Argumentera för varför skolan är viktig.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 3,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla argument med grundläggande struktur",
+      "levelC": "Tydliga argument med logisk uppbyggnad",
+      "levelA": "Övertygande argument med avancerad retorik",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "argument",
+        "skola",
+        "viktig",
+        "kunskap"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-018",
+    "skillId": "textanalys",
+    "type": "freeText",
+    "prompt": "Analysera temat i en kort text om vänskap.",
+    "answer": {
+      "modelAnswer": "Texten handlar om vänskapens betydelse och hur den påverkar människor."
+    },
+    "explanation": "Svensk skrivförklaring för Analysera temat i en kort text om vänskap.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 4,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel analys med grundläggande förståelse",
+      "levelC": "Tydlig analys med logisk struktur",
+      "levelA": "Djupgående analys med avancerad insikt",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analys",
+        "tema",
+        "vänskap",
+        "betydelse"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-019",
+    "skillId": "kreativt-skrivande",
+    "type": "freeText",
+    "prompt": "Skriv en kreativ berättelse om en magisk skog.",
+    "answer": {
+      "modelAnswer": "I den magiska skogen växte träden mot himlen och viskade hemligheter."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en kreativ berättelse om en magisk skog.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 5,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel berättelse med grundläggande struktur",
+      "levelC": "Tydlig berättelse med varierad stil",
+      "levelA": "Engagerande berättelse med avancerat språk",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "kreativ",
+        "berättelse",
+        "magisk",
+        "skog"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-020",
+    "skillId": "meningsbyggnad",
+    "type": "freeText",
+    "prompt": "Skriv en mening om vädret idag.",
+    "answer": {
+      "modelAnswer": "Det är vackert väder idag med sol och blå himmel."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en mening om vädret idag.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 1,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel mening med grundläggande struktur",
+      "levelC": "Tydlig mening med varierad ordföljd",
+      "levelA": "Engagerande mening med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.4
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "väder",
+        "vackert",
+        "sol",
+        "himmel"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-021",
+    "skillId": "styckesstruktur",
+    "type": "freeText",
+    "prompt": "Beskriv ditt favoritdjur i 2-3 meningar.",
+    "answer": {
+      "modelAnswer": "Min favorit är katten eftersom den är mysig och självständig."
+    },
+    "explanation": "Svensk skrivförklaring för Beskriv ditt favoritdjur i 2-3 meningar.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 2,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla meningar med grundläggande beskrivning",
+      "levelC": "Tydliga meningar med varierad struktur",
+      "levelA": "Engagerande beskrivning med avancerat språk",
+      "criteria": [
+        {
+          "key": "grammar",
+          "weight": 0.3
+        },
+        {
+          "key": "vocabulary",
+          "weight": 0.4
+        },
+        {
+          "key": "cohesion",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "favoritdjur",
+        "beskrivning",
+        "egenskaper"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-022",
+    "skillId": "argumentation",
+    "type": "freeText",
+    "prompt": "Argumentera för varför skolan är viktig.",
+    "answer": {
+      "modelAnswer": "Skolan är viktig eftersom den ger oss kunskap och förbereder oss för framtiden."
+    },
+    "explanation": "Svensk skrivförklaring för Argumentera för varför skolan är viktig.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 3,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkla argument med grundläggande struktur",
+      "levelC": "Tydliga argument med logisk uppbyggnad",
+      "levelA": "Övertygande argument med avancerad retorik",
+      "criteria": [
+        {
+          "key": "argumentation",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "argument",
+        "skola",
+        "viktig",
+        "kunskap"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-023",
+    "skillId": "textanalys",
+    "type": "freeText",
+    "prompt": "Analysera temat i en kort text om vänskap.",
+    "answer": {
+      "modelAnswer": "Texten handlar om vänskapens betydelse och hur den påverkar människor."
+    },
+    "explanation": "Svensk skrivförklaring för Analysera temat i en kort text om vänskap.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 4,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel analys med grundläggande förståelse",
+      "levelC": "Tydlig analys med logisk struktur",
+      "levelA": "Djupgående analys med avancerad insikt",
+      "criteria": [
+        {
+          "key": "analysis",
+          "weight": 0.4
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "analys",
+        "tema",
+        "vänskap",
+        "betydelse"
+      ]
+    }
+  },
+  {
+    "id": "swedish-item-024",
+    "skillId": "kreativt-skrivande",
+    "type": "freeText",
+    "prompt": "Skriv en kreativ berättelse om en magisk skog.",
+    "answer": {
+      "modelAnswer": "I den magiska skogen växte träden mot himlen och viskade hemligheter."
+    },
+    "explanation": "Svensk skrivförklaring för Skriv en kreativ berättelse om en magisk skog.. Tänk på struktur, grammatik och ordförråd.",
+    "difficulty": 5,
+    "tags": [
+      "skrivande",
+      "grammatik",
+      "struktur"
+    ],
+    "rubric": {
+      "levelE": "Enkel berättelse med grundläggande struktur",
+      "levelC": "Tydlig berättelse med varierad stil",
+      "levelA": "Engagerande berättelse med avancerat språk",
+      "criteria": [
+        {
+          "key": "creativity",
+          "weight": 0.4
+        },
+        {
+          "key": "language",
+          "weight": 0.3
+        },
+        {
+          "key": "structure",
+          "weight": 0.3
+        }
+      ],
+      "keywords": [
+        "kreativ",
+        "berättelse",
+        "magisk",
+        "skog"
+      ]
+    }
+  }
+]

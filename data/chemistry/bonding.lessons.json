@@ -1,0 +1,37 @@
+[
+  {
+    "id": "lesson-001",
+    "skillId": "atomstruktur",
+    "title": "Atomstruktur - Lektion 1",
+    "content": "Detta är innehållet för Atomstruktur lektion 1. Här lär du dig grundläggande koncept och metoder.",
+    "order": 1
+  },
+  {
+    "id": "lesson-002",
+    "skillId": "jonbindning",
+    "title": "Jonbindning - Lektion 2",
+    "content": "Detta är innehållet för Jonbindning lektion 2. Här lär du dig grundläggande koncept och metoder.",
+    "order": 2
+  },
+  {
+    "id": "lesson-003",
+    "skillId": "kovalent-bindning",
+    "title": "Kovalent bindning - Lektion 3",
+    "content": "Detta är innehållet för Kovalent bindning lektion 3. Här lär du dig grundläggande koncept och metoder.",
+    "order": 3
+  },
+  {
+    "id": "lesson-004",
+    "skillId": "molekylgeometri",
+    "title": "Molekylgeometri - Lektion 4",
+    "content": "Detta är innehållet för Molekylgeometri lektion 4. Här lär du dig grundläggande koncept och metoder.",
+    "order": 4
+  },
+  {
+    "id": "lesson-005",
+    "skillId": "intermolekylara-krafter",
+    "title": "Intermolekylära krafter - Lektion 5",
+    "content": "Detta är innehållet för Intermolekylära krafter lektion 5. Här lär du dig grundläggande koncept och metoder.",
+    "order": 5
+  }
+]

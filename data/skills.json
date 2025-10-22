@@ -1,0 +1,310 @@
+{
+  "subjects": [
+    {
+      "id": "matematik",
+      "name": "Matematik",
+      "description": "Algebra och grundläggande matematik",
+      "color": "bg-blue-600",
+      "icon": "Calculator",
+      "topics": [
+        {
+          "id": "algebra-grund",
+          "name": "Algebra - Grundläggande",
+          "description": "Variabler, uttryck och enkla ekvationer",
+          "skills": [
+            {
+              "id": "variabler-uttryck",
+              "name": "Variabler och uttryck",
+              "description": "Förstå och arbeta med variabler och algebraiska uttryck",
+              "difficulty": "enkel",
+              "prerequisites": []
+            },
+            {
+              "id": "enkla-ekvationer",
+              "name": "Enkla ekvationer",
+              "description": "Lösa enkla ekvationer med en variabel",
+              "difficulty": "enkel",
+              "prerequisites": ["variabler-uttryck"]
+            },
+            {
+              "id": "parenteser",
+              "name": "Parenteser och förenkling",
+              "description": "Arbeta med parenteser och förenkla uttryck",
+              "difficulty": "medel",
+              "prerequisites": ["variabler-uttryck"]
+            },
+            {
+              "id": "kvadratiska-uttryck",
+              "name": "Kvadratiska uttryck",
+              "description": "Faktorisering och kvadratkomplettering",
+              "difficulty": "svår",
+              "prerequisites": ["enkla-ekvationer", "parenteser"]
+            },
+            {
+              "id": "kvadratiska-ekvationer",
+              "name": "Kvadratiska ekvationer",
+              "description": "Lösa kvadratiska ekvationer med olika metoder",
+              "difficulty": "svår",
+              "prerequisites": ["kvadratiska-uttryck"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fysik",
+      "name": "Fysik",
+      "description": "Mekanik och grundläggande fysik",
+      "color": "bg-purple-600",
+      "icon": "Atom",
+      "topics": [
+        {
+          "id": "mekanik-grund",
+          "name": "Mekanik - Grundläggande",
+          "description": "Kraft, rörelse och energi",
+          "skills": [
+            {
+              "id": "kraft-begrepp",
+              "name": "Kraft och kraftbegrepp",
+              "description": "Förstå vad kraft är och olika typer av krafter",
+              "difficulty": "enkel",
+              "prerequisites": []
+            },
+            {
+              "id": "newtons-lagar",
+              "name": "Newtons lagar",
+              "description": "Förstå och tillämpa Newtons tre lagar",
+              "difficulty": "medel",
+              "prerequisites": ["kraft-begrepp"]
+            },
+            {
+              "id": "rörelse-beskrivning",
+              "name": "Rörelse och hastighet",
+              "description": "Beskriva rörelse med hastighet och acceleration",
+              "difficulty": "medel",
+              "prerequisites": ["kraft-begrepp"]
+            },
+            {
+              "id": "energi-begrepp",
+              "name": "Energi och energiomvandling",
+              "description": "Förstå olika energiformer och energiomvandling",
+              "difficulty": "svår",
+              "prerequisites": ["newtons-lagar", "rörelse-beskrivning"]
+            },
+            {
+              "id": "arbete-effekt",
+              "name": "Arbete och effekt",
+              "description": "Beräkna arbete och effekt i mekaniska system",
+              "difficulty": "svår",
+              "prerequisites": ["energi-begrepp"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "svenska",
+      "name": "Svenska",
+      "description": "Skrivande och grammatisk feedback",
+      "color": "bg-green-600",
+      "icon": "BookOpen",
+      "topics": [
+        {
+          "id": "skrivande-grund",
+          "name": "Skrivande - Grundläggande",
+          "description": "Grundläggande skrivtekniker och struktur",
+          "skills": [
+            {
+              "id": "meningsbyggnad",
+              "name": "Meningsbyggnad",
+              "description": "Skriva tydliga och välstrukturerade meningar",
+              "difficulty": "enkel",
+              "prerequisites": []
+            },
+            {
+              "id": "styckesstruktur",
+              "name": "Styckesstruktur",
+              "description": "Organisera text i logiska stycken",
+              "difficulty": "medel",
+              "prerequisites": ["meningsbyggnad"]
+            },
+            {
+              "id": "argumentation",
+              "name": "Argumentation",
+              "description": "Utveckla och stödja argument i text",
+              "difficulty": "medel",
+              "prerequisites": ["styckesstruktur"]
+            },
+            {
+              "id": "textanalys",
+              "name": "Textanalys",
+              "description": "Analysera och tolka olika typer av texter",
+              "difficulty": "svår",
+              "prerequisites": ["argumentation"]
+            },
+            {
+              "id": "kreativt-skrivande",
+              "name": "Kreativt skrivande",
+              "description": "Utveckla kreativa och engagerande texter",
+              "difficulty": "svår",
+              "prerequisites": ["textanalys"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "engelska",
+      "name": "Engelska",
+      "description": "Writing och vocabulary feedback",
+      "color": "bg-red-600",
+      "icon": "Globe",
+      "topics": [
+        {
+          "id": "writing-grund",
+          "name": "Writing - Grundläggande",
+          "description": "Grundläggande engelska skrivtekniker",
+          "skills": [
+            {
+              "id": "basic-vocabulary",
+              "name": "Grundläggande ordförråd",
+              "description": "Utöka och använda grundläggande engelska ord",
+              "difficulty": "enkel",
+              "prerequisites": []
+            },
+            {
+              "id": "sentence-structure",
+              "name": "Meningstruktur",
+              "description": "Skriva korrekta engelska meningar",
+              "difficulty": "medel",
+              "prerequisites": ["basic-vocabulary"]
+            },
+            {
+              "id": "paragraph-writing",
+              "name": "Styckesskrivning",
+              "description": "Skriva välstrukturerade stycken på engelska",
+              "difficulty": "medel",
+              "prerequisites": ["sentence-structure"]
+            },
+            {
+              "id": "essay-writing",
+              "name": "Uppsatskrivning",
+              "description": "Skriva strukturerade uppsatser på engelska",
+              "difficulty": "svår",
+              "prerequisites": ["paragraph-writing"]
+            },
+            {
+              "id": "advanced-vocabulary",
+              "name": "Avancerat ordförråd",
+              "description": "Använda avancerat engelskt ordförråd",
+              "difficulty": "svår",
+              "prerequisites": ["essay-writing"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kemi",
+      "name": "Kemi",
+      "description": "Binding och bonding",
+      "color": "bg-orange-600",
+      "icon": "Beaker",
+      "topics": [
+        {
+          "id": "binding-grund",
+          "name": "Binding - Grundläggande",
+          "description": "Kemiska bindningar och molekylstrukturer",
+          "skills": [
+            {
+              "id": "atomstruktur",
+              "name": "Atomstruktur",
+              "description": "Förstå atomens uppbyggnad och elektronkonfiguration",
+              "difficulty": "enkel",
+              "prerequisites": []
+            },
+            {
+              "id": "jonbindning",
+              "name": "Jonbindning",
+              "description": "Förstå jonbindningar och jonföreningar",
+              "difficulty": "medel",
+              "prerequisites": ["atomstruktur"]
+            },
+            {
+              "id": "kovalent-bindning",
+              "name": "Kovalent bindning",
+              "description": "Förstå kovalenta bindningar och molekyler",
+              "difficulty": "medel",
+              "prerequisites": ["atomstruktur"]
+            },
+            {
+              "id": "molekylgeometri",
+              "name": "Molekylgeometri",
+              "description": "Förstå molekylers form och struktur",
+              "difficulty": "svår",
+              "prerequisites": ["kovalent-bindning"]
+            },
+            {
+              "id": "intermolekylara-krafter",
+              "name": "Intermolekylära krafter",
+              "description": "Förstå krafter mellan molekyler",
+              "difficulty": "svår",
+              "prerequisites": ["molekylgeometri"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biologi",
+      "name": "Biologi",
+      "description": "Genetik och grundläggande biologi",
+      "color": "bg-teal-600",
+      "icon": "Dna",
+      "topics": [
+        {
+          "id": "genetik-grund",
+          "name": "Genetik - Grundläggande",
+          "description": "Genetik och arvsmassa",
+          "skills": [
+            {
+              "id": "cellstruktur",
+              "name": "Cellstruktur",
+              "description": "Förstå cellens uppbyggnad och funktion",
+              "difficulty": "enkel",
+              "prerequisites": []
+            },
+            {
+              "id": "dna-struktur",
+              "name": "DNA-struktur",
+              "description": "Förstå DNA:s uppbyggnad och funktion",
+              "difficulty": "medel",
+              "prerequisites": ["cellstruktur"]
+            },
+            {
+              "id": "genetisk-kod",
+              "name": "Genetisk kod",
+              "description": "Förstå hur genetisk information kodas",
+              "difficulty": "medel",
+              "prerequisites": ["dna-struktur"]
+            },
+            {
+              "id": "arvslagar",
+              "name": "Mendels arvslagar",
+              "description": "Förstå och tillämpa Mendels arvslagar",
+              "difficulty": "svår",
+              "prerequisites": ["genetisk-kod"]
+            },
+            {
+              "id": "mutationer",
+              "name": "Mutationer och variation",
+              "description": "Förstå mutationer och genetisk variation",
+              "difficulty": "svår",
+              "prerequisites": ["arvslagar"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

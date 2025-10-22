@@ -1,0 +1,37 @@
+[
+  {
+    "id": "lesson-001",
+    "skillId": "basic-vocabulary",
+    "title": "Grundläggande ordförråd - Lektion 1",
+    "content": "Detta är innehållet för Grundläggande ordförråd lektion 1. Här lär du dig grundläggande koncept och metoder.",
+    "order": 1
+  },
+  {
+    "id": "lesson-002",
+    "skillId": "sentence-structure",
+    "title": "Meningstruktur - Lektion 2",
+    "content": "Detta är innehållet för Meningstruktur lektion 2. Här lär du dig grundläggande koncept och metoder.",
+    "order": 2
+  },
+  {
+    "id": "lesson-003",
+    "skillId": "paragraph-writing",
+    "title": "Styckesskrivning - Lektion 3",
+    "content": "Detta är innehållet för Styckesskrivning lektion 3. Här lär du dig grundläggande koncept och metoder.",
+    "order": 3
+  },
+  {
+    "id": "lesson-004",
+    "skillId": "essay-writing",
+    "title": "Uppsatskrivning - Lektion 4",
+    "content": "Detta är innehållet för Uppsatskrivning lektion 4. Här lär du dig grundläggande koncept och metoder.",
+    "order": 4
+  },
+  {
+    "id": "lesson-005",
+    "skillId": "advanced-vocabulary",
+    "title": "Avancerat ordförråd - Lektion 5",
+    "content": "Detta är innehållet för Avancerat ordförråd lektion 5. Här lär du dig grundläggande koncept och metoder.",
+    "order": 5
+  }
+]
