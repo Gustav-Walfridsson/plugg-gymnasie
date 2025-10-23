@@ -10,36 +10,47 @@ export async function POST(
   try {
     const { lessonId } = await params
     console.log('🔍 API Route called for lesson:', lessonId)
-    
-    // For now, let's use the admin client to get the user directly
-    // This bypasses the cookie authentication issue
-    console.log('🔄 Using admin client to get user...')
-    
-    const { data: accounts, error: accountsError } = await adminClient
-      .from('accounts')
-      .select('user_id, id, total_xp, completed_lessons_count')
-      .limit(1)
-      .single()
-    
-    if (accountsError || !accounts) {
-      console.error('❌ No accounts found:', accountsError?.message)
-      return NextResponse.json({ 
+
+    // Get the authenticated user from cookies
+    const supabase = await createClient()
+    const { data: { user }, error: authError } = await supabase.auth.getUser()
+
+    if (authError || !user) {
+      console.error('❌ Authentication failed:', authError?.message || 'No user found')
+      return NextResponse.json({
         error: 'Unauthorized',
-        details: 'No user account found',
+        details: authError?.message || 'No user found',
         completed: false,
         xp_awarded: 0
       }, { status: 401 })
     }
-    
-    const userId = accounts.user_id
-    console.log('✅ Using user ID:', userId)
 
-    const accountId = accounts.id
+    console.log('👤 Authenticated user:', user.email)
+
+    // Get the account for this user
+    const { data: account, error: accountError } = await supabase
+      .from('accounts')
+      .select('id, total_xp, completed_lessons_count')
+      .eq('user_id', user.id)
+      .is('deleted_at', null)
+      .single()
+
+    if (accountError || !account) {
+      console.error('❌ Account not found:', accountError?.message)
+      return NextResponse.json({
+        error: 'Account not found',
+        details: accountError?.message || 'No account found for user',
+        completed: false,
+        xp_awarded: 0
+      }, { status: 404 })
+    }
+
+    const accountId = account.id
     console.log('✅ Using account ID:', accountId)
     const xpPerLesson = 10
 
     // Check if lesson already completed
-    const { data: existingCompletion, error: checkError } = await adminClient
+    const { data: existingCompletion, error: checkError } = await supabase
       .from('lesson_completions')
       .select('id')
       .eq('account_id', accountId)
@@ -56,7 +67,7 @@ export async function POST(
     }
 
     // Insert new completion
-    const { data: completion, error: completionError } = await adminClient
+    const { data: completion, error: completionError } = await supabase
       .from('lesson_completions')
       .insert({
         account_id: accountId,
@@ -69,12 +80,9 @@ export async function POST(
     // Om insert lyckades (ny completion), lägg till XP
     if (!completionError && completion) {
       console.log('✅ Lesson completion inserted successfully, adding XP...')
-      
-      // Use the account data we already have
-      const currentAccount = accounts
 
       // Insert i xp_ledger (idempotent)
-      const { error: xpLedgerError } = await adminClient
+      const { error: xpLedgerError } = await supabase
         .from('xp_ledger')
         .insert({
           account_id: accountId,
@@ -89,11 +97,11 @@ export async function POST(
       }
 
       // Uppdatera accounts: öka total_xp och completed_lessons_count
-      const { error: updateError } = await adminClient
+      const { error: updateError } = await supabase
         .from('accounts')
         .update({
-          total_xp: currentAccount.total_xp + xpPerLesson,
-          completed_lessons_count: currentAccount.completed_lessons_count + 1
+          total_xp: account.total_xp + xpPerLesson,
+          completed_lessons_count: account.completed_lessons_count + 1
         })
         .eq('id', accountId)
 

@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { ArrowLeft, User, Trophy, Star, Target, Zap, Award } from 'lucide-react'
 import { useAuth } from '../../lib/auth-simple'
-import { createClient } from '../../lib/supabase/client'
+import { getProfileData, getBadgesData, getWeakAreasData } from '../../lib/profile-data'
 
 export default function ProfilePage() {
-  const { user, loading: authLoading } = useAuth()
+  const { user, loading: authLoading, accountId } = useAuth()
   
   // Show loading while checking auth
   if (authLoading) {
@@ -53,48 +53,30 @@ export default function ProfilePage() {
 
       try {
         setLoading(true)
-        
-        // Load profile data from Supabase using client
-        const supabase = createClient()
-        
-        // Get account data
-        const { data: account, error: accountError } = await supabase
-          .from('accounts')
-          .select('total_xp, completed_lessons_count')
-          .eq('user_id', user.id)
-          .single()
 
-        if (account) {
-          const level = Math.floor(Math.sqrt(account.total_xp / 100)) + 1
+        if (!accountId) {
+          console.error('❌ No account ID available')
+          setLoading(false)
+          return
+        }
+
+        // Load profile data from Supabase
+        const profileData = await getProfileData(accountId)
+        if (profileData) {
           setProfile(prev => ({
             ...prev,
-            level,
-            totalXP: account.total_xp || 0,
-            completedLessonsCount: account.completed_lessons_count || 0,
-            name: user.email || 'Användare'
+            ...profileData,
+            name: user?.email || 'Användare'
           }))
         }
 
-        // Load badges (simplified)
-        setBadges([
-          {
-            id: 'first-session',
-            name: 'Första sessionen',
-            description: 'Slutförde din första studiesession',
-            icon: '🎯',
-            earnedAt: new Date(),
-            rarity: 'common'
-          }
-        ])
+        // Load badges
+        const badgesData = await getBadgesData(accountId)
+        setBadges(badgesData || [])
 
-        // Load weak areas (simplified)
-        setWeakAreas([
-          {
-            skillId: 'genetisk-kod',
-            mastery: 0,
-            name: 'Genetisk Kod'
-          }
-        ])
+        // Load weak areas
+        const weakAreasData = await getWeakAreasData(accountId)
+        setWeakAreas(weakAreasData || [])
 
         console.log('✅ Profile data loaded from Supabase')
         

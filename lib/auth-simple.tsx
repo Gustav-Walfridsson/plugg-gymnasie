@@ -34,12 +34,35 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         if (session?.user) {
           console.log('✅ User authenticated:', session.user.email)
           setUser(session.user)
-          
-          // TEMPORARY FIX: Use auth.users.id as account_id until RLS policies are debugged
-          // TODO: Replace with RPC call to get_account_id after fixing policies
-          setAccountId(session.user.id)
-          analyticsEngine.setAccountId(session.user.id)
-          console.log('⚠️ TEMPORARY: Using auth.users.id as accountId:', session.user.id)
+
+          // Get the account ID from the accounts table
+          const getAccountId = async () => {
+            try {
+              const supabase = createClient()
+              const { data: account, error } = await supabase
+                .from('accounts')
+                .select('id')
+                .eq('user_id', session.user.id)
+                .is('deleted_at', null)
+                .single()
+
+              if (account && !error) {
+                setAccountId(account.id)
+                analyticsEngine.setAccountId(account.id)
+                console.log('✅ Using account ID:', account.id)
+              } else {
+                console.log('⚠️ No account found, using user ID as fallback:', session.user.id)
+                setAccountId(session.user.id)
+                analyticsEngine.setAccountId(session.user.id)
+              }
+            } catch (error) {
+              console.error('❌ Error getting account ID:', error)
+              setAccountId(session.user.id)
+              analyticsEngine.setAccountId(session.user.id)
+            }
+          }
+
+          getAccountId()
         } else {
           console.log('❌ No user in session')
           setUser(null)
