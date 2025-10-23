@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { supabase } from '../../../lib/supabase-client'
+import { createClient } from '../../../lib/supabase/client'
 
 function AuthCallbackContent() {
   const [loading, setLoading] = useState(true)
@@ -17,6 +17,7 @@ function AuthCallbackContent() {
         console.log('Handling auth callback, redirectTo:', redirectTo)
         
         // Handle the auth callback
+        const supabase = createClient()
         const { data, error } = await supabase.auth.getSession()
         
         if (error) {

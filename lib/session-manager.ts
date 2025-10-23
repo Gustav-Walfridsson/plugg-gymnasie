@@ -21,6 +21,7 @@ export class SessionManager {
   private async initializeSession() {
     try {
       console.log('🔄 Initializing session...')
+      const supabase = createClient()
       const { data: { session }, error } = await supabase.auth.getSession()
       
       if (error) {

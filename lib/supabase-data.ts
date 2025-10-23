@@ -1,6 +1,6 @@
 'use client'
 
-import { supabase } from './supabase-client'
+import { createClient } from './supabase/client'
 import type { Subject, Topic, Skill } from '../types/domain'
 
 /**
@@ -11,9 +11,8 @@ import type { Subject, Topic, Skill } from '../types/domain'
 export async function getSubjects(): Promise<Subject[]> {
   try {
     console.log('🔄 Fetching subjects from Supabase...')
+    const supabase = createClient()
     console.log('🔍 Supabase client status:', {
-      url: supabase.supabaseUrl,
-      keyLength: supabase.supabaseKey?.length,
       clientExists: !!supabase
     })
 
@@ -194,9 +193,8 @@ export async function updateUserAccount(userId: string, level: number, totalXP: 
 export async function saveUserProgress(userId: string, skillId: string, mastery: number, correctAnswers?: number, totalAttempts?: number): Promise<boolean> {
   try {
     console.log('🔄 Saving user progress:', { userId, skillId, mastery, correctAnswers, totalAttempts })
+    const supabase = createClient()
     console.log('🔍 Supabase client status:', {
-      url: supabase.supabaseUrl,
-      keyLength: supabase.supabaseKey?.length,
       clientExists: !!supabase
     })
 
