@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { cookies } from 'next/headers'
 
 export async function POST(
   request: NextRequest,
@@ -7,12 +8,33 @@ export async function POST(
 ) {
   try {
     const { lessonId } = await params
+    console.log('🔍 API Route called for lesson:', lessonId)
+    
     const supabase = await createClient()
+    
+    // Debug: Check cookies
+    const cookieStore = await cookies()
+    const authCookies = cookieStore.getAll().filter(cookie => 
+      cookie.name.includes('supabase') || cookie.name.includes('auth')
+    )
+    console.log('🍪 Auth cookies found:', authCookies.length)
     
     // Hämta inloggad användare
     const { data: { user }, error: authError } = await supabase.auth.getUser()
+    console.log('👤 Auth check result:', { 
+      hasUser: !!user, 
+      userEmail: user?.email,
+      authError: authError?.message 
+    })
+    
     if (authError || !user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      console.error('❌ Authentication failed:', authError?.message || 'No user found')
+      return NextResponse.json({ 
+        error: 'Unauthorized',
+        details: authError?.message || 'No user found',
+        completed: false,
+        xp_awarded: 0
+      }, { status: 401 })
     }
 
     // Hämta account_id

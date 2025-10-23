@@ -37,35 +37,8 @@ if (!supabaseUrl || !supabaseAnonKey) {
       autoRefreshToken: true,
       persistSession: true,
       detectSessionInUrl: true,
-      flowType: 'pkce',
-      storage: typeof window !== 'undefined' ? {
-        getItem: (key: string) => {
-          try {
-            const item = window.localStorage.getItem(key)
-            console.log('Getting from localStorage:', key, item ? 'Found' : 'Not found')
-            return item
-          } catch (error) {
-            console.error('Error getting item from localStorage:', error)
-            return null
-          }
-        },
-        setItem: (key: string, value: string) => {
-          try {
-            window.localStorage.setItem(key, value)
-            console.log('Session saved to localStorage:', key)
-          } catch (error) {
-            console.error('Error setting item in localStorage:', error)
-          }
-        },
-        removeItem: (key: string) => {
-          try {
-            window.localStorage.removeItem(key)
-            console.log('Session removed from localStorage:', key)
-          } catch (error) {
-            console.error('Error removing item from localStorage:', error)
-          }
-        }
-      } : undefined
+      flowType: 'pkce'
+      // Remove custom storage - let Supabase handle cookies automatically
     }
   })
 }

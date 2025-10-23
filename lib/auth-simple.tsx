@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { User } from '@supabase/supabase-js'
-import { supabase } from './supabase-client'
+import { createClient } from './supabase/client'
 import { sessionManager } from './session-manager'
 import { analyticsEngine } from './analytics'
 
@@ -51,6 +51,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       })
 
       // Listen for auth changes from Supabase
+      const supabase = createClient()
       const { data: { subscription } } = supabase.auth.onAuthStateChange(
         async (event, session) => {
           console.log('🔄 Supabase auth state change:', event, session?.user?.email || 'No user')
@@ -79,9 +80,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signUp = async (email: string, password: string) => {
     try {
       console.log('📝 Signing up:', email)
-      if (!supabase) {
-        throw new Error('Supabase not available')
-      }
+      const supabase = createClient()
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
@@ -108,6 +107,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       console.log('🔑 Signing in:', email)
       setLoading(true)
       
+      const supabase = createClient()
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
@@ -138,6 +138,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signInWithMagicLink = async (email: string) => {
     try {
       console.log('🔗 Sending magic link to:', email)
+      const supabase = createClient()
       const { data, error } = await supabase.auth.signInWithOtp({
         email,
         options: {
@@ -161,6 +162,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signOut = async () => {
     try {
       console.log('🚪 Signing out')
+      const supabase = createClient()
       const { error } = await supabase.auth.signOut()
       
       if (error) {

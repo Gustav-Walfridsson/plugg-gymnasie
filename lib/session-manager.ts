@@ -1,6 +1,6 @@
 'use client'
 
-import { supabase } from './supabase-client'
+import { createClient } from './supabase/client'
 
 export class SessionManager {
   private static instance: SessionManager
