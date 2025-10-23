@@ -17,9 +17,27 @@ export function LessonCard({ lesson, isCompleted = false, onComplete }: LessonCa
   const wordCount = lesson.content.split(' ').length
   const readingTime = Math.ceil(wordCount / 200)
 
-  const handleComplete = () => {
+  const handleComplete = async () => {
     if (onComplete && !isCompleted) {
-      onComplete(lesson.id)
+      try {
+        const response = await fetch(`/api/lessons/${lesson.id}/complete`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        })
+        
+        const data = await response.json()
+        
+        if (response.ok && data.completed) {
+          // Success - show notification
+          alert(data.message) // Ersätt med toast-notification senare
+          onComplete(lesson.id)
+        } else if (data.message) {
+          alert(data.message)
+        }
+      } catch (error) {
+        console.error('Error completing lesson:', error)
+        alert('Ett fel uppstod. Försök igen.')
+      }
     }
   }
 

@@ -1,15 +1,24 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowLeft, BookOpen, Target, Clock, Play } from 'lucide-react'
+import { ArrowLeft, BookOpen, Target, Clock, Play, CheckCircle } from 'lucide-react'
 import { LessonCard } from '../../../../../components/study/LessonCard'
 import { useParams } from 'next/navigation'
+import { useState, useEffect } from 'react'
 
 export default function SkillDetailPage() {
   const params = useParams()
   const subjectId = params.subject as string
   const topicId = params.topic as string
   const skillId = params.skillId as string
+
+  // State for completed lessons
+  const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set())
+
+  // Handle lesson completion
+  const handleLessonComplete = (lessonId: string) => {
+    setCompletedLessons(prev => new Set([...prev, lessonId]))
+  }
 
   // Static data - no loading states or complex state management
   const subjectData = {
@@ -672,7 +681,8 @@ export default function SkillDetailPage() {
               <LessonCard
                 key={lesson.id}
                 lesson={lesson}
-                isCompleted={false} // TODO: Get from user progress
+                isCompleted={completedLessons.has(lesson.id)}
+                onComplete={handleLessonComplete}
               />
             ))}
           </div>

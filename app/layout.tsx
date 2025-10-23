@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 import './globals.css'
 import { AuthProvider } from '../lib/auth-simple'
 import { AuthButtons } from '../components/AuthButtons'
@@ -82,12 +83,12 @@ export default function RootLayout({
                   <div>
                     <h3 className="font-semibold mb-4">Ämnen</h3>
                     <ul className="text-sm text-muted-foreground space-y-2">
-                      <li>Matematik</li>
-                      <li>Fysik</li>
-                      <li>Svenska</li>
-                      <li>Engelska</li>
-                      <li>Kemi</li>
-                      <li>Biologi</li>
+                      <li><Link href="/study/matematik" className="hover:text-primary">Matematik</Link></li>
+                      <li><Link href="/study/fysik" className="hover:text-primary">Fysik</Link></li>
+                      <li><Link href="/study/svenska" className="hover:text-primary">Svenska</Link></li>
+                      <li><Link href="/study/engelska" className="hover:text-primary">Engelska</Link></li>
+                      <li><Link href="/study/kemi" className="hover:text-primary">Kemi</Link></li>
+                      <li><Link href="/study/biologi" className="hover:text-primary">Biologi</Link></li>
                     </ul>
                   </div>
                   <div>
