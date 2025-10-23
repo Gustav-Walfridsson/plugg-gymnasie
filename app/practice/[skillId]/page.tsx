@@ -240,6 +240,8 @@ export default function PracticePage({ params }: PracticePageProps) {
         setQuestions(skillQuestions)
         setUserAnswers(new Array(skillQuestions.length).fill(''))
         setResults(new Array(skillQuestions.length).fill(false))
+        
+        // Analytics will be handled by simple localStorage approach
       } catch (error) {
         console.error('Error loading practice data:', error)
         // Set fallback data
@@ -287,6 +289,8 @@ export default function PracticePage({ params }: PracticePageProps) {
           console.log('💾 Saving progress for skill:', skillId)
           await progressManager.updateProgress(user.id, skillId, true)
           console.log('✅ Progress saved successfully')
+          
+          // Analytics tracked via localStorage in progressManager
         } catch (error) {
           console.error('❌ Error saving progress:', error)
         }
@@ -299,6 +303,8 @@ export default function PracticePage({ params }: PracticePageProps) {
         try {
           console.log('💾 Saving progress for incorrect answer:', skillId)
           await progressManager.updateProgress(user.id, skillId, false)
+          
+          // Analytics tracked via localStorage in progressManager
         } catch (error) {
           console.error('❌ Error saving progress:', error)
         }

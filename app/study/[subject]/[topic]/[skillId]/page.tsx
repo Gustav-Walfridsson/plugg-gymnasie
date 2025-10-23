@@ -5,15 +5,52 @@ import { ArrowLeft, BookOpen, Target, Clock, Play, CheckCircle } from 'lucide-re
 import { LessonCard } from '../../../../../components/study/LessonCard'
 import { useParams } from 'next/navigation'
 import { useState, useEffect } from 'react'
+import { supabase } from '../../../../../lib/supabase-client'
+import { useAuth } from '../../../../../lib/auth-simple'
 
 export default function SkillDetailPage() {
   const params = useParams()
   const subjectId = params.subject as string
   const topicId = params.topic as string
   const skillId = params.skillId as string
+  
+  const { user, accountId } = useAuth()
 
   // State for completed lessons
   const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set())
+  const [loadingCompleted, setLoadingCompleted] = useState(true)
+
+  // Load completed lessons from database
+  useEffect(() => {
+    const loadCompletedLessons = async () => {
+      if (!accountId) {
+        setLoadingCompleted(false)
+        return
+      }
+
+      try {
+        console.log('📚 Loading completed lessons for account:', accountId)
+        const { data, error } = await supabase
+          .from('lesson_completions')
+          .select('lesson_id')
+          .eq('account_id', accountId)
+
+        if (error) {
+          console.error('❌ Error loading completed lessons:', error)
+        } else {
+          console.log('✅ Loaded completed lessons:', data?.length || 0)
+          const completedSet = new Set(data?.map(item => item.lesson_id) || [])
+          setCompletedLessons(completedSet)
+        }
+      } catch (error) {
+        console.error('❌ Error loading completed lessons:', error)
+      } finally {
+        setLoadingCompleted(false)
+      }
+    }
+
+    loadCompletedLessons()
+  }, [accountId])
 
   // Handle lesson completion
   const handleLessonComplete = (lessonId: string) => {

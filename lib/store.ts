@@ -12,7 +12,7 @@ import type {
   StudySession 
 } from '../types/domain'
 import { supabaseStore } from './supabase-store'
-import { createClient } from './supabase/client'
+import { supabase } from './supabase-client'
 
 export interface StoreData {
   profile: UserProfile
@@ -49,7 +49,6 @@ export class Store {
    */
   private async initializeAuth(): Promise<void> {
     try {
-      const supabase = createClient()
       const { data: { user }, error } = await supabase.auth.getUser()
       if (error) throw error
       if (user) {

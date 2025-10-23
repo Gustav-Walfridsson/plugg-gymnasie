@@ -1,6 +1,9 @@
 /**
  * Supabase Client - Singleton client for database operations
  * Handles authentication, database queries, and real-time subscriptions
+ * 
+ * IMPORTANT: This is the SINGLE source of truth for Supabase client instances
+ * All other files should import from this file to avoid multiple instances
  */
 
 import { createClient } from '@supabase/supabase-js'
@@ -10,37 +13,39 @@ import type { Database } from './supabase-types'
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-// Debug environment variables
-console.log('Supabase URL:', supabaseUrl ? 'Found' : 'Missing')
-console.log('Supabase Key:', supabaseAnonKey ? 'Found' : 'Missing')
-
-// Create Supabase client
+// Create Supabase client - SINGLETON PATTERN
 let supabase: any
 
 if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables. Please check your .env.local file.')
 } else {
-  console.log('Creating Supabase client with provided credentials')
-  console.log('Supabase URL:', supabaseUrl)
-  console.log('Supabase Key length:', supabaseAnonKey?.length)
-  
-  // Validate URL format
-  try {
-    new URL(supabaseUrl)
-    console.log('URL validation passed')
-  } catch (error) {
-    console.error('Invalid URL format:', error)
-  }
-  
-  supabase = createClient<Database>(supabaseUrl, supabaseAnonKey, {
-    auth: {
-      autoRefreshToken: true,
-      persistSession: true,
-      detectSessionInUrl: true,
-      flowType: 'pkce'
-      // Remove custom storage - let Supabase handle cookies automatically
+  // Only log once to avoid console spam
+  if (!supabase) {
+    console.log('🔧 Creating SINGLE Supabase client instance')
+    console.log('Supabase URL:', supabaseUrl)
+    console.log('Supabase Key length:', supabaseAnonKey?.length)
+    
+    // Validate URL format
+    try {
+      new URL(supabaseUrl)
+      console.log('✅ URL validation passed')
+    } catch (error) {
+      console.error('❌ Invalid URL format:', error)
     }
-  })
+    
+    supabase = createClient<Database>(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        autoRefreshToken: true,
+        persistSession: true,
+        detectSessionInUrl: true,
+        flowType: 'pkce',
+        storage: typeof window !== 'undefined' ? window.localStorage : undefined,
+        storageKey: 'sb-jdarjalbbetvvfpcvnvt-auth-token'
+      }
+    })
+    
+    console.log('✅ Supabase client created successfully')
+  }
 }
 
 export { supabase }
@@ -81,7 +86,7 @@ export const auth = {
     const { data, error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${window.location.origin}/auth/magic-link`
+        emailRedirectTo: `${window.location.origin}/auth/callback`
       }
     })
     return { data, error }

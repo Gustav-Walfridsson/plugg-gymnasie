@@ -3,7 +3,7 @@
  * Replaces localStorage with Supabase database persistence
  */
 
-import { createClient } from './supabase/client'
+import { supabase } from './supabase-client'
 import type { 
   UserProfile, 
   MasteryState, 

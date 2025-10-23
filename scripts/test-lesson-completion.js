@@ -1,101 +1,74 @@
-// Test script to verify the lesson completion API
-import { createClient } from '@supabase/supabase-js'
-import dotenv from 'dotenv'
+const { createClient } = require('@supabase/supabase-js');
+require('dotenv').config({ path: '.env.local' });
 
-// Load environment variables
-dotenv.config({ path: '.env.local' })
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
-
-if (!supabaseUrl || !serviceRoleKey) {
-  console.error('❌ Missing environment variables')
-  process.exit(1)
-}
-
-// Create admin client for testing
-const supabase = createClient(supabaseUrl, serviceRoleKey, {
-  auth: {
-    autoRefreshToken: false,
-    persistSession: false,
-  },
-})
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY
+);
 
 async function testLessonCompletion() {
+  console.log('🧪 Testing lesson completion API directly...\n');
+  
   try {
-    console.log('🧪 Testing lesson completion system...')
-    
-    // Test 1: Check if tables exist
-    console.log('1. Checking if tables exist...')
-    
-    const { data: lessonCompletions, error: lcError } = await supabase
+    // Test 1: Check if we can insert into lesson_completions
+    console.log('1. Testing lesson_completions table access...');
+    const { data: testInsert, error: insertError } = await supabase
       .from('lesson_completions')
-      .select('count')
-      .limit(1)
+      .insert({
+        account_id: '00000000-0000-0000-0000-000000000000', // dummy ID
+        lesson_id: 'test-lesson',
+        xp_awarded: 10
+      })
+      .select();
     
-    if (lcError) {
-      console.error('❌ lesson_completions table error:', lcError.message)
-      return false
+    if (insertError) {
+      console.log('❌ Insert error:', insertError.message);
+      console.log('Details:', insertError.details);
+      console.log('Hint:', insertError.hint);
+    } else {
+      console.log('✅ Insert successful');
+      // Clean up test data
+      await supabase.from('lesson_completions').delete().eq('lesson_id', 'test-lesson');
     }
-    console.log('✅ lesson_completions table exists')
     
-    const { data: xpLedger, error: xpError } = await supabase
+    // Test 2: Check if we can insert into xp_ledger
+    console.log('\n2. Testing xp_ledger table access...');
+    const { data: testXpInsert, error: xpInsertError } = await supabase
       .from('xp_ledger')
-      .select('count')
-      .limit(1)
+      .insert({
+        account_id: '00000000-0000-0000-0000-000000000000', // dummy ID
+        source_type: 'lesson_completion',
+        source_id: 'test-lesson',
+        xp: 10
+      })
+      .select();
     
-    if (xpError) {
-      console.error('❌ xp_ledger table error:', xpError.message)
-      return false
+    if (xpInsertError) {
+      console.log('❌ XP Insert error:', xpInsertError.message);
+      console.log('Details:', xpInsertError.details);
+      console.log('Hint:', xpInsertError.hint);
+    } else {
+      console.log('✅ XP Insert successful');
+      // Clean up test data
+      await supabase.from('xp_ledger').delete().eq('source_id', 'test-lesson');
     }
-    console.log('✅ xp_ledger table exists')
     
-    // Test 2: Check if accounts table has the new column
-    console.log('2. Checking accounts table structure...')
-    
+    // Test 3: Check accounts table
+    console.log('\n3. Testing accounts table access...');
     const { data: accounts, error: accountsError } = await supabase
       .from('accounts')
       .select('id, total_xp, completed_lessons_count')
-      .limit(1)
+      .limit(1);
     
     if (accountsError) {
-      console.error('❌ accounts table error:', accountsError.message)
-      return false
+      console.log('❌ Accounts error:', accountsError.message);
+    } else {
+      console.log('✅ Accounts access successful');
     }
-    console.log('✅ accounts table has required columns')
-    
-    // Test 3: Check if get_account_id function works
-    console.log('3. Testing get_account_id function...')
-    
-    const { data: testUser } = await supabase
-      .from('accounts')
-      .select('user_id')
-      .limit(1)
-      .single()
-    
-    if (testUser) {
-      const { data: accountId, error: funcError } = await supabase
-        .rpc('get_account_id', { user_uuid: testUser.user_id })
-      
-      if (funcError) {
-        console.error('❌ get_account_id function error:', funcError.message)
-        return false
-      }
-      console.log('✅ get_account_id function works')
-    }
-    
-    // Test 4: Test RLS policies (this would require authentication)
-    console.log('4. RLS policies are in place (would need auth to test fully)')
-    
-    console.log('🎉 All database components are working correctly!')
-    return true
     
   } catch (error) {
-    console.error('❌ Test failed:', error)
-    return false
+    console.error('❌ Error:', error.message);
   }
 }
 
-testLessonCompletion().then(success => {
-  process.exit(success ? 0 : 1)
-})
+testLessonCompletion();

@@ -7,6 +7,7 @@ import { tutorEngine } from '../../lib/tutor'
 import { masteryEngine } from '../../lib/mastery'
 import { useAuth } from '../../lib/auth-simple'
 import { supabase } from '../../lib/supabase-client'
+import { analyticsEngine } from '../../lib/analytics'
 import type { QuizItem } from '../../types/domain'
 import type { TutorState, TutorHint } from '../../lib/tutor'
 
@@ -71,8 +72,7 @@ export default function TutorPage() {
             )
           `)
           .in('type', ['numeric', 'multiple_choice', 'text'])
-          .limit(1)
-          .order('random()')
+          .limit(20) // Fetch more items for better randomization
 
         const { data: items, error: itemsError } = await Promise.race([
           fetchPromise,
@@ -115,7 +115,9 @@ export default function TutorPage() {
           return
         }
 
-        const item = items[0]
+        // Client-side shuffle for random selection
+        const shuffled = [...items].sort(() => Math.random() - 0.5)
+        const item = shuffled[0]
         
         // Transform database item to QuizItem format
         const quizItem: QuizItem = {
@@ -184,7 +186,7 @@ export default function TutorPage() {
           skill_id: currentItem.skillId,
           item_id: currentItem.id,
           is_correct: correct,
-          response_time_ms: 0, // We don't track response time for tutor
+          time_spent: 0, // We don't track response time for tutor
           timestamp: new Date().toISOString()
         })
 
@@ -220,6 +222,22 @@ export default function TutorPage() {
       if (tutorState) {
         const updatedState = tutorEngine.recordAttempt(currentItem.id, accountId, correct)
         setTutorState(updatedState)
+      }
+      
+      // Track analytics
+      if (user) {
+        try {
+          await analyticsEngine.itemAnswered(
+            user.id,
+            currentItem.id,
+            currentItem.skillId,
+            correct,
+            0 // No time tracking for tutor
+          )
+          console.log('📊 Analytics tracked for tutor answer')
+        } catch (error) {
+          console.error('❌ Error tracking tutor analytics:', error)
+        }
       }
     } catch (err) {
       console.error('Error handling answer submission:', err)

@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { User } from '@supabase/supabase-js'
-import { createClient } from './supabase/client'
+import { supabase } from './supabase-client'
 import { sessionManager } from './session-manager'
 import { analyticsEngine } from './analytics'
 
@@ -35,10 +35,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           console.log('✅ User authenticated:', session.user.email)
           setUser(session.user)
 
+          // Set user in ProgressManager for user-specific localStorage
+          const { progressManager } = await import('./progress-manager')
+          progressManager.setUser(session.user.id)
+
           // Get the account ID from the accounts table
           const getAccountId = async () => {
             try {
-              const supabase = createClient()
               const { data: account, error } = await supabase
                 .from('accounts')
                 .select('id')
@@ -68,13 +71,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           setUser(null)
           setAccountId(null)
           analyticsEngine.setAccountId(null)
+          
+          // Clear user from ProgressManager
+          const { progressManager } = await import('./progress-manager')
+          progressManager.clearUser()
         }
         
         setLoading(false)
       })
 
       // Listen for auth changes from Supabase
-      const supabase = createClient()
       const { data: { subscription } } = supabase.auth.onAuthStateChange(
         async (event, session) => {
           console.log('🔄 Supabase auth state change:', event, session?.user?.email || 'No user')
@@ -103,7 +109,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signUp = async (email: string, password: string) => {
     try {
       console.log('📝 Signing up:', email)
-      const supabase = createClient()
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
@@ -130,7 +135,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       console.log('🔑 Signing in:', email)
       setLoading(true)
       
-      const supabase = createClient()
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
@@ -161,7 +165,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signInWithMagicLink = async (email: string) => {
     try {
       console.log('🔗 Sending magic link to:', email)
-      const supabase = createClient()
       const { data, error } = await supabase.auth.signInWithOtp({
         email,
         options: {
@@ -185,7 +188,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signOut = async () => {
     try {
       console.log('🚪 Signing out')
-      const supabase = createClient()
       const { error } = await supabase.auth.signOut()
       
       if (error) {

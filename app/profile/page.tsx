@@ -9,6 +9,57 @@ import { getProfileData, getBadgesData, getWeakAreasData } from '../../lib/profi
 export default function ProfilePage() {
   const { user, loading: authLoading, accountId } = useAuth()
   
+  // ✅ Hooks FIRST - before any conditional returns
+  const [profile, setProfile] = useState({
+    name: user?.email || 'Användare',
+    level: 1,
+    totalXP: 0,
+    studyStreak: 0,
+    currentStreak: 0,
+    completedLessonsCount: 0
+  })
+  const [badges, setBadges] = useState<any[]>([])
+  const [availableBadges, setAvailableBadges] = useState<any[]>([])
+  const [weakAreas, setWeakAreas] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const loadProfileData = async () => {
+      // ✅ Early return if no user or accountId
+      if (!user || !accountId) {
+        setLoading(false)
+        return
+      }
+
+      try {
+        setLoading(true)
+        
+        // Parallel data fetching for better performance
+        const [profileData, badgesData, weakAreasData] = await Promise.all([
+          getProfileData(accountId),
+          getBadgesData(accountId),
+          getWeakAreasData(accountId)
+        ])
+
+        if (profileData) {
+          setProfile(prev => ({ ...prev, ...profileData, name: user.email || 'Användare' }))
+        }
+        setBadges(badgesData || [])
+        setWeakAreas(weakAreasData || [])
+        
+        console.log('✅ Profile data loaded from Supabase')
+        
+      } catch (error) {
+        console.error('Error loading profile data:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadProfileData()
+  }, [user, accountId]) // ✅ Include both dependencies
+
+  // ✅ Conditional returns AFTER hooks
   // Show loading while checking auth
   if (authLoading) {
     return (
@@ -31,64 +82,6 @@ export default function ProfilePage() {
       </div>
     )
   }
-  const [profile, setProfile] = useState({
-    name: user?.email || 'Användare',
-    level: 1,
-    totalXP: 0,
-    studyStreak: 0,
-    currentStreak: 0,
-    completedLessonsCount: 0
-  })
-  const [badges, setBadges] = useState<any[]>([])
-  const [availableBadges, setAvailableBadges] = useState<any[]>([])
-  const [weakAreas, setWeakAreas] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const loadProfileData = async () => {
-      if (!user) {
-        setLoading(false)
-        return
-      }
-
-      try {
-        setLoading(true)
-
-        if (!accountId) {
-          console.error('❌ No account ID available')
-          setLoading(false)
-          return
-        }
-
-        // Load profile data from Supabase
-        const profileData = await getProfileData(accountId)
-        if (profileData) {
-          setProfile(prev => ({
-            ...prev,
-            ...profileData,
-            name: user?.email || 'Användare'
-          }))
-        }
-
-        // Load badges
-        const badgesData = await getBadgesData(accountId)
-        setBadges(badgesData || [])
-
-        // Load weak areas
-        const weakAreasData = await getWeakAreasData(accountId)
-        setWeakAreas(weakAreasData || [])
-
-        console.log('✅ Profile data loaded from Supabase')
-        
-      } catch (error) {
-        console.error('Error loading profile data:', error)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    loadProfileData()
-  }, [user])
 
   if (loading) {
     return (

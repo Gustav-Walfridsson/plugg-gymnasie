@@ -14,9 +14,10 @@ export interface UserProgress {
 export class ProgressManager {
   private static instance: ProgressManager
   private progress: Map<string, UserProgress> = new Map()
+  private userId: string | null = null
 
   private constructor() {
-    this.loadFromStorage()
+    // Don't load from storage until user is set
   }
 
   static getInstance(): ProgressManager {
@@ -26,14 +27,41 @@ export class ProgressManager {
     return ProgressManager.instance
   }
 
+  /**
+   * Set the current user and load their progress
+   */
+  setUser(userId: string): void {
+    if (this.userId !== userId) {
+      this.userId = userId
+      this.progress.clear()
+      this.loadFromStorage()
+      console.log('👤 ProgressManager set for user:', userId)
+    }
+  }
+
+  /**
+   * Clear user data (for logout)
+   */
+  clearUser(): void {
+    this.userId = null
+    this.progress.clear()
+    console.log('👤 ProgressManager cleared')
+  }
+
   private loadFromStorage(): void {
+    if (!this.userId) {
+      console.warn('⚠️ Cannot load progress: No user ID set')
+      return
+    }
+    
     try {
       if (typeof window !== 'undefined') {
-        const stored = localStorage.getItem('plugg-bot-progress')
+        const storageKey = `plugg-bot-progress-${this.userId}`
+        const stored = localStorage.getItem(storageKey)
         if (stored) {
           const data = JSON.parse(stored)
           this.progress = new Map(data)
-          console.log('📊 Loaded progress from localStorage:', this.progress.size, 'skills')
+          console.log('📊 Loaded progress from localStorage for user:', this.userId, 'skills:', this.progress.size)
         }
       }
     } catch (error) {
@@ -42,11 +70,17 @@ export class ProgressManager {
   }
 
   private saveToStorage(): void {
+    if (!this.userId) {
+      console.warn('⚠️ Cannot save progress: No user ID set')
+      return
+    }
+    
     try {
       if (typeof window !== 'undefined') {
+        const storageKey = `plugg-bot-progress-${this.userId}`
         const data = Array.from(this.progress.entries())
-        localStorage.setItem('plugg-bot-progress', JSON.stringify(data))
-        console.log('💾 Saved progress to localStorage')
+        localStorage.setItem(storageKey, JSON.stringify(data))
+        console.log('💾 Saved progress to localStorage for user:', this.userId)
       }
     } catch (error) {
       console.error('❌ Error saving progress to localStorage:', error)

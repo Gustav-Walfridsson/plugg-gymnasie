@@ -14,31 +14,56 @@ function AuthCallbackContent() {
   useEffect(() => {
     const handleAuthCallback = async () => {
       try {
-        console.log('Handling auth callback, redirectTo:', redirectTo)
+        console.log('🔗 Handling auth callback, redirectTo:', redirectTo)
+        console.log('📍 Current URL:', window.location.href)
+        
+        // Check if we have tokens in the URL hash
+        const hashParams = new URLSearchParams(window.location.hash.substring(1))
+        const accessToken = hashParams.get('access_token')
+        const refreshToken = hashParams.get('refresh_token')
+        
+        console.log('🔑 Access token present:', !!accessToken)
+        console.log('🔄 Refresh token present:', !!refreshToken)
+        
+        if (!accessToken) {
+          console.log('❌ No access token in URL, redirecting to login')
+          router.push('/auth/login')
+          return
+        }
         
         // Handle the auth callback
         const supabase = createClient()
-        const { data, error } = await supabase.auth.getSession()
         
-        if (error) {
-          console.error('Auth callback error:', error)
-          setError('Inloggning misslyckades')
+        // Set the session manually from URL tokens
+        console.log('🔧 Setting session from URL tokens...')
+        const { data: sessionData, error: sessionError } = await supabase.auth.setSession({
+          access_token: accessToken,
+          refresh_token: refreshToken || ''
+        })
+        
+        if (sessionError) {
+          console.error('❌ Session error:', sessionError)
+          setError('Inloggning misslyckades: ' + sessionError.message)
           setLoading(false)
           return
         }
-
-        if (data.session) {
-          console.log('Auth callback successful, user:', data.session.user.email)
-          // User is authenticated, redirect to intended page
+        
+        console.log('✅ Session set successfully:', sessionData.session?.user?.email)
+        
+        if (sessionData.session?.user) {
+          console.log('🎉 User authenticated:', sessionData.session.user.email)
+          // Clear the URL hash to remove tokens
+          window.history.replaceState({}, document.title, window.location.pathname)
           router.push(redirectTo)
         } else {
-          console.log('No session in callback, redirecting to login')
-          // No session, redirect to login
-          router.push('/auth/login')
+          console.log('❌ No user in session after setting tokens')
+          setError('Inloggning misslyckades: Ingen användare hittades')
+          setLoading(false)
         }
+        
       } catch (err) {
-        console.error('Unexpected error during auth callback:', err)
-        setError('Ett oväntat fel uppstod')
+        console.error('❌ Unexpected error during auth callback:', err)
+        setError('Ett oväntat fel uppstod: ' + err.message)
         setLoading(false)
       }
     }

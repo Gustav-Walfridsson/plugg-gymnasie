@@ -11,15 +11,39 @@ export async function POST(
     const { lessonId } = await params
     console.log('🔍 API Route called for lesson:', lessonId)
 
-    // Get the authenticated user from cookies
-    const supabase = await createClient()
-    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    // Try to get user from Authorization header first (from frontend)
+    const authHeader = request.headers.get('authorization')
+    let user = null
+    
+    if (authHeader && authHeader.startsWith('Bearer ')) {
+      const token = authHeader.substring(7)
+      console.log('🔑 Using Bearer token from header')
+      
+      // Verify token with admin client
+      const { data: { user: tokenUser }, error: tokenError } = await adminClient.auth.getUser(token)
+      if (!tokenError && tokenUser) {
+        user = tokenUser
+        console.log('✅ User verified from token:', user.email)
+      }
+    }
+    
+    // Fallback: try server client
+    if (!user) {
+      console.log('🔄 Fallback: trying server client...')
+      const supabase = await createClient()
+      const { data: { user: serverUser }, error: authError } = await supabase.auth.getUser()
+      
+      if (!authError && serverUser) {
+        user = serverUser
+        console.log('✅ User verified from server client:', user.email)
+      }
+    }
 
-    if (authError || !user) {
-      console.error('❌ Authentication failed:', authError?.message || 'No user found')
+    if (!user) {
+      console.error('❌ Authentication failed: No user found')
       return NextResponse.json({
         error: 'Unauthorized',
-        details: authError?.message || 'No user found',
+        details: 'No user found',
         completed: false,
         xp_awarded: 0
       }, { status: 401 })
@@ -27,8 +51,8 @@ export async function POST(
 
     console.log('👤 Authenticated user:', user.email)
 
-    // Get the account for this user
-    const { data: account, error: accountError } = await supabase
+    // Get the account for this user using admin client
+    const { data: account, error: accountError } = await adminClient
       .from('accounts')
       .select('id, total_xp, completed_lessons_count')
       .eq('user_id', user.id)
@@ -49,8 +73,8 @@ export async function POST(
     console.log('✅ Using account ID:', accountId)
     const xpPerLesson = 10
 
-    // Check if lesson already completed
-    const { data: existingCompletion, error: checkError } = await supabase
+    // Check if lesson already completed using admin client
+    const { data: existingCompletion, error: checkError } = await adminClient
       .from('lesson_completions')
       .select('id')
       .eq('account_id', accountId)
@@ -66,8 +90,8 @@ export async function POST(
       })
     }
 
-    // Insert new completion
-    const { data: completion, error: completionError } = await supabase
+    // Insert new completion using admin client
+    const { data: completion, error: completionError } = await adminClient
       .from('lesson_completions')
       .insert({
         account_id: accountId,
@@ -81,8 +105,8 @@ export async function POST(
     if (!completionError && completion) {
       console.log('✅ Lesson completion inserted successfully, adding XP...')
 
-      // Insert i xp_ledger (idempotent)
-      const { error: xpLedgerError } = await supabase
+      // Insert i xp_ledger (idempotent) using admin client
+      const { error: xpLedgerError } = await adminClient
         .from('xp_ledger')
         .insert({
           account_id: accountId,
@@ -96,8 +120,8 @@ export async function POST(
         throw xpLedgerError
       }
 
-      // Uppdatera accounts: öka total_xp och completed_lessons_count
-      const { error: updateError } = await supabase
+      // Uppdatera accounts: öka total_xp och completed_lessons_count using admin client
+      const { error: updateError } = await adminClient
         .from('accounts')
         .update({
           total_xp: account.total_xp + xpPerLesson,

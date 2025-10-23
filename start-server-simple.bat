@@ -7,7 +7,7 @@ echo   Starting Next.js Development Server
 echo ========================================
 echo.
 
-cd /d "D:\Plugg hemsida\plugg-bot-1"
+cd /d "D:\Plugg hemsida"
 
 echo Checking if server is already running...
 netstat -ano | findstr :3000 >nul
@@ -25,7 +25,7 @@ echo The server will start in a new window.
 echo Keep this window open to monitor the server.
 echo.
 
-start "Next.js Server" cmd /k "cd /d D:\Plugg hemsida\plugg-bot-1 && npm run dev"
+start "Next.js Server" cmd /k "cd /d D:\Plugg hemsida && npm run dev"
 
 echo.
 echo Server starting... Please wait 10 seconds...

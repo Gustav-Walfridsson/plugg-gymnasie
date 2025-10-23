@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { ArrowLeft, RotateCcw, Clock, CheckCircle, XCircle, BookOpen, Eye, EyeOff, RefreshCw } from 'lucide-react'
 import { useAuth } from '../../lib/auth-simple'
 import { supabase } from '../../lib/supabase-client'
+import { analyticsEngine } from '../../lib/analytics'
 
 interface Flashcard {
   id: string
@@ -159,7 +160,8 @@ export default function ReviewPage() {
           skill_id: currentCard.skill_id,
           item_id: currentCard.id,
           is_correct: isCorrect,
-          response_time_ms: 0, // We don't track response time for flashcards
+          answer: { flashcard: true, userAnswer: isCorrect }, // Required jsonb field
+          time_spent: 0, // We don't track response time for flashcards
           timestamp: new Date().toISOString()
         })
 
@@ -172,6 +174,22 @@ export default function ReviewPage() {
         setStreak(prev => prev + 1)
       } else {
         setStreak(0)
+      }
+
+      // Track analytics
+      if (user) {
+        try {
+          await analyticsEngine.itemAnswered(
+            user.id,
+            currentCard.id,
+            currentCard.skill_id,
+            isCorrect,
+            0 // No time tracking for flashcards
+          )
+          console.log('📊 Analytics tracked for flashcard answer')
+        } catch (error) {
+          console.error('❌ Error tracking flashcard analytics:', error)
+        }
       }
 
       // Move to next card

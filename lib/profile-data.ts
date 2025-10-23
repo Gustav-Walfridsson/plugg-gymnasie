@@ -1,4 +1,5 @@
-import { createClient } from '@/lib/supabase/client'
+import { supabase } from './supabase-client'
+import { handleError, createErrorContext } from './error-handler'
 
 export interface ProfileData {
   name: string
@@ -10,8 +11,6 @@ export interface ProfileData {
 
 export async function getProfileData(accountId: string): Promise<ProfileData | null> {
   try {
-    const supabase = createClient()
-
     const { data: account, error } = await supabase
       .from('accounts')
       .select('name, level, total_xp, study_streak, completed_lessons_count')
@@ -20,7 +19,8 @@ export async function getProfileData(accountId: string): Promise<ProfileData | n
       .single()
 
     if (error || !account) {
-      console.error('Error fetching profile data:', error)
+      const context = createErrorContext('ProfileData', 'getProfileData', { accountId })
+      handleError(error || new Error('No account data'), context)
       return null
     }
 
@@ -32,61 +32,67 @@ export async function getProfileData(accountId: string): Promise<ProfileData | n
       completedLessonsCount: account.completed_lessons_count || 0
     }
   } catch (error) {
-    console.error('Error in getProfileData:', error)
+    const context = createErrorContext('ProfileData', 'getProfileData', { accountId })
+    handleError(error, context)
     return null
   }
 }
 
 export async function getBadgesData(accountId: string): Promise<any[]> {
   try {
-    const supabase = createClient()
-
     const { data: badges, error } = await supabase
-      .from('badges')
+      .from('user_badges')
       .select('*')
       .eq('account_id', accountId)
-      .eq('is_earned', true)
 
     if (error) {
-      console.error('Error fetching badges:', error)
+      const context = createErrorContext('ProfileData', 'getBadgesData', { accountId })
+      handleError(error, context)
       return []
     }
 
     return badges || []
   } catch (error) {
-    console.error('Error in getBadgesData:', error)
+    const context = createErrorContext('ProfileData', 'getBadgesData', { accountId })
+    handleError(error, context)
     return []
   }
 }
 
+/**
+ * Get weak areas data based on mastery probability
+ * @param accountId - The account ID to fetch weak areas for
+ * @returns Array of weak areas based on probability (0.0-1.0 scale)
+ */
 export async function getWeakAreasData(accountId: string): Promise<any[]> {
   try {
-    const supabase = createClient()
-
     // Get user progress data to identify weak areas
     const { data: progress, error } = await supabase
-      .from('user_progress')
-      .select('skill_id, mastery_level')
+      .from('mastery_states')
+      .select('skill_id, probability')
       .eq('account_id', accountId)
+      .is('deleted_at', null)
 
     if (error || !progress) {
-      console.error('Error fetching progress:', error)
+      const context = createErrorContext('ProfileData', 'getWeakAreasData', { accountId })
+      handleError(error || new Error('No progress data'), context)
       return []
     }
 
-    // Identify weak areas (mastery < 0.5)
+    // Identify weak areas (probability < 0.5)
     const weakAreas = progress
-      .filter(p => (p.mastery_level || 0) < 0.5)
+      .filter(p => (p.probability || 0) < 0.5)
       .slice(0, 5)
       .map(p => ({
         skillId: p.skill_id,
-        mastery: p.mastery_level || 0,
+        mastery: p.probability || 0,
         name: p.skill_id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
       }))
 
     return weakAreas
   } catch (error) {
-    console.error('Error in getWeakAreasData:', error)
-    return []
+    const context = createErrorContext('ProfileData', 'getWeakAreasData', { accountId })
+    handleError(error, context)
+    return [] // Fail gracefully, don't crash page
   }
 }

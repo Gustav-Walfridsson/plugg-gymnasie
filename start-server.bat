@@ -12,7 +12,7 @@ echo This window will stay open and monitor the server.
 echo Press Ctrl+C to stop the server.
 echo.
 
-cd /d "D:\Plugg hemsida\plugg-bot-1"
+cd /d "D:\Plugg hemsida"
 
 :restart
 echo [%date% %time%] Starting Next.js development server...

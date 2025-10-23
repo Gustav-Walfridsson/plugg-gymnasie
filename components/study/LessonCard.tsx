@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ChevronDown, ChevronUp, BookOpen, Clock, CheckCircle } from 'lucide-react'
+import { supabase } from '../../lib/supabase-client'
 import type { Lesson } from '../../types/domain'
 
 interface LessonCardProps {
@@ -30,24 +31,49 @@ export function LessonCard({ lesson, isCompleted = false, onComplete }: LessonCa
     setCompletionStatus('loading')
 
     try {
+      // Get current session and access token
+      const { data: { session }, error: sessionError } = await supabase.auth.getSession()
+      
+      if (sessionError || !session) {
+        console.error('❌ No session found:', sessionError?.message)
+        setCompletionStatus('error')
+        alert('Du måste vara inloggad för att markera lektioner som lästa.')
+        return
+      }
+
+      console.log('🔑 Using access token for API call')
+      
       const response = await fetch(`/api/lessons/${lesson.id}/complete`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`
+        }
       })
       
       console.log('📡 API Response:', response.status, response.statusText)
       const data = await response.json()
       console.log('📄 Response data:', data)
       
-      if (response.ok && data.completed) {
-        // Success - show notification and update state
-        setCompletionStatus('success')
-        alert(data.message || 'Lektion markerad som läst! Du fick 10 XP.')
-        onComplete(lesson.id)
-        
-        // Reset status after 2 seconds
-        setTimeout(() => setCompletionStatus('idle'), 2000)
+      if (response.ok) {
+        if (data.completed) {
+          // Success - new completion
+          setCompletionStatus('success')
+          alert(data.message || 'Lektion markerad som läst! Du fick 10 XP.')
+          onComplete(lesson.id)
+          
+          // Reset status after 2 seconds
+          setTimeout(() => setCompletionStatus('idle'), 2000)
+        } else {
+          // Already completed - not an error, just informational
+          console.log('ℹ️ Lesson already completed:', data.message)
+          alert(data.message || 'Lektion redan markerad som läst')
+          
+          // Don't show error state, just reset to idle
+          setTimeout(() => setCompletionStatus('idle'), 1000)
+        }
       } else {
+        // Actual error - show error state
         setCompletionStatus('error')
         console.error('❌ API Error Response:', {
           status: response.status,
@@ -62,7 +88,12 @@ export function LessonCard({ lesson, isCompleted = false, onComplete }: LessonCa
     } catch (error) {
       console.error('❌ Error completing lesson:', error)
       setCompletionStatus('error')
-      alert('Ett fel uppstod. Försök igen.')
+      
+      if (error instanceof Error && error.message.includes('session')) {
+        alert('Din session har gått ut. Logga in igen.')
+      } else {
+        alert('Ett fel uppstod. Försök igen.')
+      }
       
       // Reset status after 3 seconds
       setTimeout(() => setCompletionStatus('idle'), 3000)
@@ -110,15 +141,9 @@ export function LessonCard({ lesson, isCompleted = false, onComplete }: LessonCa
           
           <div className="flex items-center space-x-2">
             {isCompleted && (
-              <button
-                onClick={(e) => {
-                  e.stopPropagation()
-                  handleComplete()
-                }}
-                className="px-3 py-1 text-xs bg-green-100 text-green-800 rounded-full hover:bg-green-200 transition-colors"
-              >
-                Markera som oläst
-              </button>
+              <div className="px-3 py-1 text-xs bg-green-100 text-green-800 rounded-full">
+                ✓ Läst
+              </div>
             )}
             {isExpanded ? (
               <ChevronUp className="w-4 h-4 text-muted-foreground" />

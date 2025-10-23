@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { ArrowLeft, BarChart3, Clock, Target, TrendingUp, Activity, Download, Trash2 } from 'lucide-react'
 import { useAuth } from '../../lib/auth-simple'
-import { progressManager } from '../../lib/progress-manager'
 
 export default function AnalyticsPage() {
   const { user } = useAuth()
@@ -25,36 +24,73 @@ export default function AnalyticsPage() {
         setLoading(true)
         
         if (user) {
-          // Load real data from ProgressManager
-          const allProgress = progressManager.getAllProgress()
+          console.log('📊 Loading SIMPLE analytics for user:', user.email)
           
-          // Calculate real analytics
-          const totalSessions = allProgress.length
-          const totalTime = allProgress.reduce((sum, p) => sum + (p.totalAttempts || 0) * 30, 0) // Estimate 30s per attempt
-          const totalItems = allProgress.reduce((sum, p) => sum + (p.totalAttempts || 0), 0)
-          const correctAnswers = allProgress.reduce((sum, p) => sum + (p.correctAnswers || 0), 0)
-          const skillsMastered = allProgress.filter(p => (p.mastery || 0) >= 0.8).length
-          const accuracy = totalItems > 0 ? (correctAnswers / totalItems) * 100 : 0
+          // RADICAL APPROACH: Read directly from localStorage progress data
+          const storageKey = `plugg-bot-progress-${user.id}`
+          const storedProgress = localStorage.getItem(storageKey)
           
-          // Get recent activity from progress
-          const recentActivity = allProgress
-            .sort((a, b) => new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime())
-            .slice(0, 5)
-            .map(progress => ({
-              type: 'start_session',
-              timestamp: new Date(progress.lastUpdated),
-              data: { skillId: progress.skillId || 'unknown' }
-            }))
-          
-          setAnalyticsData({
-            totalSessions,
-            totalTime,
-            totalItems,
-            correctAnswers,
-            skillsMastered,
-            accuracy,
-            recentActivity
-          })
+          if (storedProgress) {
+            const progressData = JSON.parse(storedProgress)
+            const progressMap = new Map(progressData)
+            
+            console.log('📈 Found progress data:', progressMap.size, 'skills')
+            
+            // Calculate analytics from localStorage data
+            let totalItems = 0
+            let correctAnswers = 0
+            let skillsMastered = 0
+            const recentActivity: any[] = []
+            
+            progressMap.forEach((progress: any, skillId: string) => {
+              totalItems += progress.totalAttempts || 0
+              correctAnswers += progress.correctAnswers || 0
+              if ((progress.mastery || 0) >= 0.8) {
+                skillsMastered++
+              }
+              
+              // Add to recent activity
+              recentActivity.push({
+                type: 'start_session',
+                timestamp: new Date(progress.lastUpdated),
+                data: { skillId: skillId }
+              })
+            })
+            
+            const accuracy = totalItems > 0 ? (correctAnswers / totalItems) * 100 : 0
+            const totalTime = totalItems * 30000 // Estimate 30 seconds per question
+            const totalSessions = Math.ceil(totalItems / 5) // Estimate 5 questions per session
+            
+            console.log('📊 SIMPLE Analytics calculated:', {
+              totalSessions,
+              totalItems,
+              correctAnswers,
+              accuracy: accuracy.toFixed(1) + '%'
+            })
+            
+            setAnalyticsData({
+              totalSessions,
+              totalTime,
+              totalItems,
+              correctAnswers,
+              skillsMastered,
+              accuracy,
+              recentActivity: recentActivity.sort((a, b) => 
+                new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+              ).slice(0, 5)
+            })
+          } else {
+            console.log('📊 No progress data found for user')
+            setAnalyticsData({
+              totalSessions: 0,
+              totalTime: 0,
+              totalItems: 0,
+              correctAnswers: 0,
+              skillsMastered: 0,
+              accuracy: 0,
+              recentActivity: []
+            })
+          }
         } else {
           // No user logged in
           setAnalyticsData({
@@ -68,7 +104,17 @@ export default function AnalyticsPage() {
           })
         }
       } catch (error) {
-        console.error('❌ Error loading analytics:', error)
+        console.error('❌ Error loading SIMPLE analytics:', error)
+        // Set default values on error
+        setAnalyticsData({
+          totalSessions: 0,
+          totalTime: 0,
+          totalItems: 0,
+          correctAnswers: 0,
+          skillsMastered: 0,
+          accuracy: 0,
+          recentActivity: []
+        })
       } finally {
         setLoading(false)
       }
@@ -97,6 +143,35 @@ export default function AnalyticsPage() {
       hour: '2-digit',
       minute: '2-digit'
     }).format(date)
+  }
+
+  const handleClearData = async () => {
+    if (!user) return
+    
+    try {
+      console.log('🗑️ Clearing SIMPLE analytics data for user:', user.email)
+      
+      // Clear localStorage data
+      const storageKey = `plugg-bot-progress-${user.id}`
+      localStorage.removeItem(storageKey)
+      
+      // Reload analytics after clearing
+      const storedProgress = localStorage.getItem(storageKey)
+      if (!storedProgress) {
+        setAnalyticsData({
+          totalSessions: 0,
+          totalTime: 0,
+          totalItems: 0,
+          correctAnswers: 0,
+          skillsMastered: 0,
+          accuracy: 0,
+          recentActivity: []
+        })
+        console.log('✅ SIMPLE Analytics data cleared successfully')
+      }
+    } catch (error) {
+      console.error('❌ Error clearing SIMPLE analytics data:', error)
+    }
   }
 
   const getEventIcon = (type: string) => {
@@ -149,7 +224,10 @@ export default function AnalyticsPage() {
             <Download className="w-4 h-4 mr-2" />
             Exportera data
           </button>
-          <button className="btn-outline text-sm text-destructive">
+          <button 
+            onClick={handleClearData}
+            className="btn-outline text-sm text-destructive"
+          >
             <Trash2 className="w-4 h-4 mr-2" />
             Rensa data
           </button>

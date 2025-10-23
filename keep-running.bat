@@ -11,7 +11,7 @@ echo This will keep the server running permanently.
 echo Press Ctrl+C to stop.
 echo.
 
-cd /d "D:\Plugg hemsida\plugg-bot-1"
+cd /d "D:\Plugg hemsida"
 
 :restart
 echo [%date% %time%] Starting server...
