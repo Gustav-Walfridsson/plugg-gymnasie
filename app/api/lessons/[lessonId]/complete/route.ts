@@ -43,8 +43,22 @@ export async function POST(
 
     // Om insert lyckades (ny completion), lägg till XP
     if (!completionError && completion) {
+      console.log('✅ Lesson completion inserted successfully, adding XP...')
+      
+      // Hämta nuvarande account data för att uppdatera XP
+      const { data: currentAccount, error: currentAccountError } = await supabase
+        .from('accounts')
+        .select('total_xp, completed_lessons_count')
+        .eq('id', accountId)
+        .single()
+
+      if (currentAccountError || !currentAccount) {
+        console.error('❌ Error fetching current account data:', currentAccountError)
+        throw new Error('Could not fetch account data for XP update')
+      }
+
       // Insert i xp_ledger (idempotent)
-      await supabase
+      const { error: xpLedgerError } = await supabase
         .from('xp_ledger')
         .insert({
           account_id: accountId,
@@ -53,19 +67,30 @@ export async function POST(
           xp: xpPerLesson
         })
 
+      if (xpLedgerError) {
+        console.error('❌ Error inserting XP ledger entry:', xpLedgerError)
+        throw xpLedgerError
+      }
+
       // Uppdatera accounts: öka total_xp och completed_lessons_count
-      await supabase
+      const { error: updateError } = await supabase
         .from('accounts')
         .update({
-          total_xp: supabase.raw(`total_xp + ${xpPerLesson}`),
-          completed_lessons_count: supabase.raw('completed_lessons_count + 1')
+          total_xp: currentAccount.total_xp + xpPerLesson,
+          completed_lessons_count: currentAccount.completed_lessons_count + 1
         })
         .eq('id', accountId)
 
+      if (updateError) {
+        console.error('❌ Error updating account stats:', updateError)
+        throw updateError
+      }
+
+      console.log('✅ XP and stats updated successfully')
       return NextResponse.json({
         completed: true,
         xp_awarded: xpPerLesson,
-        message: 'Lektion markerad som läst! +10 XP'
+        message: 'Lektion markerad som läst! Du fick 10 XP.'
       })
     } else if (completionError && completionError.code === '23505') {
       // Duplicate key error - redan markerad som läst
@@ -77,10 +102,22 @@ export async function POST(
     } else {
       throw completionError
     }
-  } catch (error) {
-    console.error('Error completing lesson:', error)
+  } catch (error: any) {
+    console.error('❌ Error completing lesson:', error)
+    console.error('❌ Error details:', {
+      message: error.message,
+      code: error.code,
+      details: error.details,
+      hint: error.hint
+    })
+    
     return NextResponse.json(
-      { error: 'Failed to complete lesson' },
+      { 
+        error: 'Ett fel uppstod vid markering av lektion',
+        details: error.message,
+        completed: false,
+        xp_awarded: 0
+      },
       { status: 500 }
     )
   }

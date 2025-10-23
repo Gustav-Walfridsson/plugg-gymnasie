@@ -49,7 +49,12 @@ export function LessonCard({ lesson, isCompleted = false, onComplete }: LessonCa
         setTimeout(() => setCompletionStatus('idle'), 2000)
       } else {
         setCompletionStatus('error')
-        alert(data.message || 'Ett fel uppstod vid markering av lektion.')
+        console.error('❌ API Error Response:', {
+          status: response.status,
+          statusText: response.statusText,
+          data: data
+        })
+        alert(data.message || data.error || 'Ett fel uppstod vid markering av lektion.')
         
         // Reset status after 3 seconds
         setTimeout(() => setCompletionStatus('idle'), 3000)
