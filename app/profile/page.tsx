@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { ArrowLeft, User, Trophy, Star, Target, Zap, Award } from 'lucide-react'
 import { useAuth } from '../../lib/auth-simple'
-import { progressManager } from '../../lib/progress-manager'
+import { getProfileData, getBadgesData, getWeakAreasData } from '../../lib/profile-data'
 
 export default function ProfilePage() {
   const { user, loading: authLoading } = useAuth()
@@ -35,7 +35,9 @@ export default function ProfilePage() {
     name: user?.email || 'Användare',
     level: 1,
     totalXP: 0,
-    studyStreak: 0
+    studyStreak: 0,
+    currentStreak: 0,
+    completedLessonsCount: 0
   })
   const [badges, setBadges] = useState<any[]>([])
   const [availableBadges, setAvailableBadges] = useState<any[]>([])
@@ -52,114 +54,25 @@ export default function ProfilePage() {
       try {
         setLoading(true)
         
-        // Load progress data
-        const allProgress = progressManager.getAllProgress()
-        
-        // Calculate real statistics
-        const totalCorrectAnswers = allProgress.reduce((sum, p) => sum + (p.correctAnswers || 0), 0)
-        const totalAttempts = allProgress.reduce((sum, p) => sum + (p.totalAttempts || 0), 0)
-        const totalXP = totalCorrectAnswers * 10 + totalAttempts * 5 // 10 XP per correct, 5 XP per attempt
-        
-        // Calculate level based on XP
-        const level = Math.floor(Math.sqrt(totalXP / 100)) + 1
-        const xpForCurrentLevel = Math.pow(level - 1, 2) * 100
-        const xpForNextLevel = Math.pow(level, 2) * 100
-        const xpToNextLevel = xpForNextLevel - totalXP
-        
-        // Calculate study streak (simplified - based on recent activity)
-        const recentActivity = allProgress.filter(p => {
-          const lastUpdated = new Date(p.lastUpdated)
-          const daysSinceUpdate = (Date.now() - lastUpdated.getTime()) / (1000 * 60 * 60 * 24)
-          return daysSinceUpdate <= 7
-        })
-        const studyStreak = Math.min(recentActivity.length, 7)
-        
-        // Calculate current streak (consecutive correct answers)
-        const currentStreak = Math.max(...allProgress.map(p => p.correctAnswers || 0), 0)
-        
-        setProfile({
-          name: user.email || 'Användare',
-          level,
-          totalXP,
-          studyStreak
-        })
-        
-        // Calculate badges based on real progress
-        const earnedBadges = []
-        const availableBadgesList = []
-        
-        if (totalAttempts > 0) {
-          earnedBadges.push({
-            id: 'first-session',
-            name: 'Första sessionen',
-            description: 'Slutförde din första studiesession',
-            icon: '🎯',
-            earnedAt: new Date(),
-            rarity: 'common'
-          })
-        }
-        
-        if (studyStreak >= 7) {
-          earnedBadges.push({
-            id: 'streak-7',
-            name: 'Veckostreak',
-            description: 'Studerade 7 dagar i rad',
-            icon: '🔥',
-            earnedAt: new Date(),
-            rarity: 'rare'
-          })
-        }
-        
-        if (totalCorrectAnswers >= 10) {
-          earnedBadges.push({
-            id: 'persistent',
-            name: 'Ihållande',
-            description: 'Fick 10 rätta svar',
-            icon: '💪',
-            earnedAt: new Date(),
-            rarity: 'rare'
-          })
-        }
-        
-        if (studyStreak < 7) {
-          availableBadgesList.push({
-            id: 'streak-7',
-            name: 'Veckostreak',
-            description: 'Studera 7 dagar i rad',
-            icon: '🔥',
-            rarity: 'rare',
-            progress: studyStreak,
-            requirement: 7
-          })
-        }
-        
-        if (studyStreak < 30) {
-          availableBadgesList.push({
-            id: 'streak-30',
-            name: 'Månadsstreak',
-            description: 'Studera 30 dagar i rad',
-            icon: '⭐',
-            rarity: 'epic',
-            progress: studyStreak,
-            requirement: 30
-          })
-        }
-        
-        setBadges(earnedBadges)
-        setAvailableBadges(availableBadgesList)
-        
-        // Calculate weak areas (skills with low mastery)
-        const weakSkills = allProgress
-          .filter(p => (p.mastery || 0) < 0.5)
-          .sort((a, b) => (a.mastery || 0) - (b.mastery || 0))
-          .slice(0, 3)
-          .map(p => ({
-            skillId: p.skillId,
-            mastery: p.mastery || 0,
-            name: p.skillId.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())
+        // Load profile data from Supabase
+        const profileData = await getProfileData(user.id)
+        if (profileData) {
+          setProfile(prev => ({
+            ...prev,
+            ...profileData,
+            name: user.email || 'Användare'
           }))
-        
-        setWeakAreas(weakSkills)
+        }
+
+        // Load badges
+        const badgesData = await getBadgesData(user.id)
+        setBadges(badgesData || [])
+
+        // Load weak areas
+        const weakAreasData = await getWeakAreasData(user.id)
+        setWeakAreas(weakAreasData || [])
+
+        console.log('✅ Profile data loaded from Supabase')
         
       } catch (error) {
         console.error('Error loading profile data:', error)
@@ -191,7 +104,6 @@ export default function ProfilePage() {
   }
 
   const xpToNextLevel = Math.pow(profile.level, 2) * 100 - profile.totalXP
-  const currentStreak = Math.max(...progressManager.getAllProgress().map(p => p.correctAnswers || 0), 0)
   return (
     <div className="space-y-6">
       <div className="flex items-center space-x-4">
@@ -254,7 +166,7 @@ export default function ProfilePage() {
             </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-muted-foreground">Nuvarande streak:</span>
-              <span className="font-medium">{currentStreak} rätta svar</span>
+              <span className="font-medium">{profile.currentStreak || 0} rätta svar</span>
             </div>
           </div>
         </div>

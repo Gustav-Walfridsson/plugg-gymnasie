@@ -38,7 +38,24 @@ export async function POST(
     console.log('✅ Using account ID:', accountId)
     const xpPerLesson = 10
 
-    // Försök insert i lesson_completions med ON CONFLICT DO NOTHING
+    // Check if lesson already completed
+    const { data: existingCompletion, error: checkError } = await adminClient
+      .from('lesson_completions')
+      .select('id')
+      .eq('account_id', accountId)
+      .eq('lesson_id', lessonId)
+      .single()
+
+    if (existingCompletion) {
+      console.log('⚠️ Lesson already completed:', lessonId)
+      return NextResponse.json({
+        completed: false,
+        xp_awarded: 0,
+        message: 'Lektion redan markerad som läst'
+      })
+    }
+
+    // Insert new completion
     const { data: completion, error: completionError } = await adminClient
       .from('lesson_completions')
       .insert({
@@ -91,14 +108,8 @@ export async function POST(
         xp_awarded: xpPerLesson,
         message: 'Lektion markerad som läst! Du fick 10 XP.'
       })
-    } else if (completionError && completionError.code === '23505') {
-      // Duplicate key error - redan markerad som läst
-      return NextResponse.json({
-        completed: false,
-        xp_awarded: 0,
-        message: 'Lektion redan markerad som läst'
-      })
     } else {
+      console.error('❌ Unexpected completion error:', completionError)
       throw completionError
     }
   } catch (error: any) {
